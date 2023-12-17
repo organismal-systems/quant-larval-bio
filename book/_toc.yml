@@ -1,0 +1,26 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: content/overview
+title: Overview
+parts:
+  - caption: Biomechanics
+    chapters:
+    - file: content/markdown
+    - file: content/notebooks
+    - file: content/biomechanics/README.md
+    sections: 
+    - file: content/biomechanics/mech-larval-swim/README.md
+  - caption: Demography
+    chapters:
+    - file: content/demography/larval-cloning/README.md      
+  - caption: Spatial Dynamics
+    chapters:
+    - file: content/spatial-dynamics/currents-tides/README.md
+  - caption: Experimental Methods
+    chapters:
+    - file: content/expt-methods/part-track/README.md
+
+
+
