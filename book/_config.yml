@@ -2,7 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Quantitative Approaches to Larval Biology -- Selected topics and executable examples
+copyright: "2023"  # Copyright year to be placed in the footer
 author: Daniel Grünbaum
+
 logo: logo.png
 
 # Force re-execution of notebooks on each build.

@@ -1,3 +1,4 @@
-# Placeholder
+# Part 3\: Spatial Dynamics
 
-This is a placeholder.
+This is a placeholder for the spatial dynamics part.
+

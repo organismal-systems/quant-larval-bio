@@ -7,20 +7,35 @@ title: Overview
 parts:
   - caption: Biomechanics
     chapters:
-    - file: content/markdown
-    - file: content/notebooks
+    #- file: content/markdown
+    #- file: content/notebooks
     - file: content/biomechanics/README.md
-    sections: 
-    - file: content/biomechanics/mech-larval-swim/README.md
+      sections: 
+      - file: content/biomechanics/mol-trans-mechs/README.md
+      - file: content/biomechanics/mech-larval-swim/README.md
   - caption: Demography
     chapters:
-    - file: content/demography/larval-cloning/README.md      
+    - file: content/demography/README.md      
+      sections: 
+      - file: content/demography/larval-cloning/README.md      
+      - file: content/demography/specialist-generalist/README.md      
+      - file: content/demography/stage-age-struct-pop/README.md      
   - caption: Spatial Dynamics
     chapters:
-    - file: content/spatial-dynamics/currents-tides/README.md
+    - file: content/spatial-dynamics/README.md
+      sections: 
+      - file: content/spatial-dynamics/persist-extinct/README.md
+      - file: content/spatial-dynamics/patchy-resource/README.md
+      - file: content/spatial-dynamics/larval-trans/README.md
+      - file: content/spatial-dynamics/currents-tides/README.md
   - caption: Experimental Methods
     chapters:
-    - file: content/expt-methods/part-track/README.md
+    - file: content/expt-methods/README.md
+      sections: 
+      - file: content/expt-methods/image-video-analysis/README.md
+      - file: content/expt-methods/part-track/README.md
+      - file: content/expt-methods/part-vel/README.md
+      - file: content/expt-methods/AI-classification/README.md
 
 
 
