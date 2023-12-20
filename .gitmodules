@@ -1,0 +1,3 @@
+[submodule "book/submodules/pyVRS"]
+	path = book/submodules/pyVRS
+	url = https://github.com/seastate/pyVRS
