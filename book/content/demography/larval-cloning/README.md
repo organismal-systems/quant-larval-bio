@@ -1,4 +1,4 @@
-# Chapter\: Larval Cloning
+# Larval Cloning
 
 This is a placeholder for the Larval Cloning chapter.
 

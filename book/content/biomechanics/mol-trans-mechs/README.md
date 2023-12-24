@@ -1,3 +1,3 @@
-# Chapter\: Molecular Transport Mechanisms
+# Molecular Transport Mechanisms
 
 This is a placeholder.

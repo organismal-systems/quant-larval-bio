@@ -1,3 +1,3 @@
-# Part 2\: Demography
+# Demography
 
 This is a placeholder for the opening of the Demography Part.

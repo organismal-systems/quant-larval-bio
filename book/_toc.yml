@@ -5,7 +5,15 @@ format: jb-book
 root: content/overview
 title: Overview
 parts:
+  - caption: Overview
+    numbered: true
+    chapters:
+    - file: content/overview/README.md      
+      sections: 
+      - file: content/overview/how-to-use/README.md      
+      - file: content/overview/how-to-use/example.ipynb
   - caption: Biomechanics
+    numbered: true
     chapters:
     #- file: content/markdown
     #- file: content/notebooks
@@ -13,7 +21,9 @@ parts:
       sections: 
       - file: content/biomechanics/mol-trans-mechs/README.md
       - file: content/biomechanics/mech-larval-swim/README.md
+      - file: content/biomechanics/mech-larval-swim/ChimeraSwim.ipynb
   - caption: Demography
+    numbered: true
     chapters:
     - file: content/demography/README.md      
       sections: 
@@ -21,6 +31,7 @@ parts:
       - file: content/demography/specialist-generalist/README.md      
       - file: content/demography/stage-age-struct-pop/README.md      
   - caption: Spatial Dynamics
+    numbered: true
     chapters:
     - file: content/spatial-dynamics/README.md
       sections: 
@@ -29,6 +40,7 @@ parts:
       - file: content/spatial-dynamics/larval-trans/README.md
       - file: content/spatial-dynamics/currents-tides/README.md
   - caption: Experimental Methods
+    numbered: true
     chapters:
     - file: content/expt-methods/README.md
       sections: 
