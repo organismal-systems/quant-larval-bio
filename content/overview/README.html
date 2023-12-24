@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Overview &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/overview/README';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.2. How to use this book" href="how-to-use/README.html" />
+    <link rel="prev" title="Quantitative Approaches to Larval Biology: Selected topics and executable examples" href="../overview.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../overview.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Approaches to Larval Biology -- Selected topics and executable examples</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../overview.html">
+                    Quantitative Approaches to Larval Biology: Selected topics and executable examples
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="how-to-use/README.html">1.2. How to use this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how-to-use/example.html">1.3. An example Jupyter notebook</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Biomechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../biomechanics/README.html">2. Biomechanics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../biomechanics/mol-trans-mechs/README.html">2.1. Molecular Transport Mechanisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../biomechanics/mech-larval-swim/README.html">2.2. Mechanics of Larval Swimming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../biomechanics/mech-larval-swim/ChimeraSwim.html">2.3. Swimming of early larval stages in still water and shear</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demography</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../demography/README.html">3. Demography</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../demography/larval-cloning/README.html">3.1. Larval Cloning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demography/specialist-generalist/README.html">3.2. Specialist vs. Generalist Life Histories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../demography/stage-age-struct-pop/README.html">3.3. Stage- and Age- Structured Populations</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Spatial Dynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../spatial-dynamics/README.html">4. Spatial Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../spatial-dynamics/persist-extinct/README.html">4.1. Effects of Scale on Persistence and Extinction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spatial-dynamics/patchy-resource/README.html">4.2. The Availability of Patchy Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spatial-dynamics/larval-trans/README.html">4.3. Larval Transport in Estuaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spatial-dynamics/currents-tides/README.html">4.4. Placeholder</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experimental Methods</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../expt-methods/README.html">5. Experimental Methods</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../expt-methods/image-video-analysis/README.html">5.1. Image and Video Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../expt-methods/part-track/README.html">5.2. Particle Tracking and PTV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../expt-methods/part-vel/README.html">5.3. Particle Image Velocimetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../expt-methods/AI-classification/README.html">5.4. AI Image Classification</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/organismal-systems/quant-larval-bio" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/organismal-systems/quant-larval-bio/issues/new?title=Issue%20on%20page%20%2Fcontent/overview/README.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/overview/README.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Overview</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-models-in-larval-biology">1.1. Why use models in Larval Biology?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="overview">
+<h1><span class="section-number">1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h1>
+<section id="why-use-models-in-larval-biology">
+<h2><span class="section-number">1.1. </span>Why use models in Larval Biology?<a class="headerlink" href="#why-use-models-in-larval-biology" title="Permalink to this heading">#</a></h2>
+<p>Larval Biology is, historically, a mostly experimental disciplne.
+Larval Biologists have frequently pushed experimental technological boundaries.
+Examples include confocal microscopy and other computerized imaging techniques, molecular techniques to identify taxa, measure population connectivity and understand patterns of development, and many other areas.
+This innovative spirit has not reached similar levels in applying quantitative approaches like mathematical modeling and computer simulations to Larval Biology.
+Mathematical models have so far made only modest contributions to Larval Biology, for example in Life History Evolution questions concerning the evolution of egg size.</p>
+<p>The potential of mathematical tools to contribute to Larval Biology, however, is much broader and deeper than the current literature reflects.
+One reason thinking about and using models can benefit Larval Biologists is that much of what we do already <em>implicitly</em> assumes some type of modeling framework.
+For example, all statistics are based on underlying models about probability distributions and random processes that emerge from them (independent events, normal distributions, etc.).
+Nearly all measurements of environmental characteristics (temperature, pH, salinity, etc.) are based on electrical measurements as proxies for the quantity being measured.
+The resistance or voltage measured is translated into the environmental quantity using models.
+Even more broadly, most experimental design is based (often on an unspoken, intuitive level) on assumptions about how a measurement or manipulation carries implications for a biological process.</p>
+<p>A great many scientists who undertake statistical tests, use environmental sensors or design experiments have little awareness of the ways their work is based solidly on modeling.
+Better awareness of the modeling already involved in their work, especially if they also approach their investigations with a quantitative framework in mind, could result in a very satisfying synergy:
+Modelers who also undertake experiments can design different, more insightful models.
+Experimentalists equipped with a modeling perspective can have insights that enable them to design better, more compelling experiments.
+The best modeling of all is <em>modeling while experimenting</em>, when moving quickly between the computer and the laboratory or field site makes the connections between nature and models especially thought-provoking.</p>
+<p>Disseminating some of the background knowledge and experience for using models, and the understanding of why using models is a productive adjunct to traditional approaches in Larval Biology, is a primary objective of this book.
+A future Larval Biology in which the potential of models to enhance discovery is more fully exploited – in which quantitative models are freely interdigitated among empirical methods and observations where each approach can best contribute  – would be a more interesting, productive and impactful discipline.</p>
+<p>Some of the reasons Larval Biologists might be interested in quantitative models are:</p>
+<p><em><strong>Models are tools for inferring the logical consequences of specific assumptions.</strong></em></p>
+<p>The emphasis here is on the “specific assumptions” as much as on the “logical consequences”.
+In a career of modeling biological processes in which I believed I was well versed, and of helping other biologists to formulate models in their own areas of expertise, I have consistently encountered two phenomena:</p>
+<ul class="simple">
+<li><p>Formulating a mathematical model requires <em>specificity</em> in details that are easy to overlook in conceptual thinking:
+Exactly <em>how</em> is a process like morphogenesis, synchronized spawning, predator avoidance or gene flow regulated?
+In what way are an egg, an early embryo, a larva and an adult “individuals” in a population model?
+I have been frequently flummoxed (and delighted) to discover basic aspects I had never thought about in organismal systems I thought I knew well.
+Writing down a quantitative model, even if results are never calculated, exposes these details and the intriguing new insights and questions that arise from them.</p></li>
+<li><p>Different scientists, especially scientists from different disciplines, use the <em>same word with very different meanings</em>.
+This means that interdisciplinary collaborations, which are necessary and productive in Larval Biology, are frequently derailed by misunderstandings between two experts who have firm, well-founded (but different) interpretations of the subject at hand.
+An example is “memory”.
+To a mathematician or statistician, a “memoryless system” is one in which the current state determines the probabilities of future events, without regard to how the current state was brought about.
+Thus, a mathematician could happily formulate a “memoryless” model of the human brain.
+Clearly, this would not be a biologist’s interpretation.
+Confounding vocabulary and other vagueness in terminology is usually clarified when the relevant biological mechanisms are expressed in mathematical form.</p></li>
+</ul>
+<p><em><strong>Models are tools for inferring what we want to know from what we can measure.</strong></em></p>
+<p>Larval Biology is frequently hampered by quantities and characteristics  that we want to know but cannot directly measure.
+What are the fitness implications of variants we observe in morphology, size, behavior, geography, or seasonality?
+What are the mechanisms responsible for patterns in speciation and extinction, for species range expansion and contraction, or for the prevalence or rarity of different life history strategies?
+How is recruitment of a larval cohort limited or enhanced by each of the numerous biotic and abiotic environmental variables at a given time and place?
+How are environmental signals transduced the sensory and regulatory processes into reproductive, foraging or mortality events?</p>
+<p>All of these questions, and many more, involve unknowns that are difficult or impossible to measure.
+Modeling provides approaches to infer quantities that cannot be measured.
+For example, it is in most cases impractical to measure the mortality rates of larvae in the plankton or in benthic environments.
+Direct measurements would involve unobtrusive observations following a large sample size of individual larvae, recording whether and how they died.
+In most cases, this is not possible to carry out.
+An alternative is to track cohorts of larvae, measuring changes in abundance, age- and stage- structure, and geographic distribution.
+From cohort data, <em>combined with a modeling framework that provides quantitative predictions based on alternative mortality regimes</em>, inferences can be made regarding plausible rates and mechanisms of mortality in the observed larval population (<strong>REF</strong>)).</p>
+<p>Another way in which observations are constrained is in considering the consequences of hypothetical alternatives to observed characteristics such as morphology or life history.
+Organisms that do not exist cannot be observed, but models that correctly reflect the key underlying mechanisms can give quantitative implications of how those organisms might function.</p>
+<p><em><strong>Models are tools for communicating biological knowledge across organisational levels.</strong></em></p>
+<p>Another way in which models can contribute to insights in Larval Biology is by integrating specialized knowledge from different disciplines.
+For example, a biologist investigating maternal allocation to reproduction – how many eggs of what size should mom make each year – may focus on the physiology of egg production, the energy inputs and outputs of mature females, and coordination of spawning to maximize fertilization success.
+However, she would not be able to draw inferences about the costs and benefits of the traits she observes without context:
+What are the functional consequences of smaller or larger larvae in terms of swimming ability, food capture and predator avoidance?
+What are the geographic implications of shorter or longer planktonic durations, and do those have implications for maintaining viable self-sustaining populations?
+How do impacts in present environments compared to historical environments, or future environments under ocean change?
+Each of these questions draws in the expertise of other scientists, whose understanding can be exploited by an investigator of larval reproduction.
+Biomechanical models may provide her with specific estimates of how swimming and sensory performance is likely to differ in smaller or larger larvae.
+Demographic models may offer quantitative insight into the consequences of variations in planktonic duration.
+Geophysical circulation models may predict the transport of larvae in tides and currents, and environmental characteristics such as temperature, oxygen, chlorophyll and pH that may affect larval recruitment.
+Climate models may specify the environmental conditions inrelevant to past and future environments.
+In all these cases, quantitative models formulated at one biological or environmental level can be leveraged by investigators at another level.
+Leveraging models in this way provides a mechanisms for community level collaborations, in which investigators make their discoveries available in the form of publicly available and easily used toolkits.
+This approach would mark a change for Larval Biology, but would be following the productive pathways of other disciplines such as statistics, geophysical modeling and molecular biology.</p>
+<p><em><strong>Models let you make scientific discoveries anytime, anywhere.</strong></em></p>
+<p>Beyond all of these reasons, one additional point which has given me satisfaction is worth mentioning:
+Most larvae are available only at narrowly constrained times and places, commonly a certain interval in spring or early summer, at a field station or offshore location.
+Experimental work in Larval Biology grinds to a halt outside this very limited window in space and time,
+Modeling is portable and extends the productive working season of a Larval Biologist to year-round.
+The thrill of a novel insight in Larval Biology, even if obtained on a computer rather than a microscope, is equally thrilling in the dark winter months!</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/overview"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Quantitative Approaches to Larval Biology: Selected topics and executable examples</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="how-to-use/README.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>How to use this book</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-models-in-larval-biology">1.1. Why use models in Larval Biology?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Daniel Grünbaum
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
