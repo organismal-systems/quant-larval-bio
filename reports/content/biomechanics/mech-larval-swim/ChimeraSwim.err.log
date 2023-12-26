@@ -18,22 +18,46 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-%matplotlib
-from mpl_toolkits import mplot3d
+# Set up graphics environment
+#%matplotlib inline
+#%matplotlib notebook
+#import IPython
+%matplotlib widget
+#%matplotlib ipympl
 from matplotlib import pyplot
+pyplot.ioff()
+#pyplot.ion()
+from mpl_interactions import ipyplot as iplt
+from mpl_toolkits import mplot3d
 from matplotlib.colors import LightSource
+# Import modules
 import numpy as np
 from math import pi
 import os
+# set up path to submodules
+import sys
+sys.path.append('../../../submodules/')
+sys.path.append('../../../submodules/pyVRS')
+import pyVRS.pyVRSmorph as mrph
+import pyVRS.pyVRSflow as flw
+from pyVRS.meshSpheroid import chimeraSpheroid
+# Import widget infrastructure
+from ipywidgets import interact, interactive, fixed, interact_manual
+import ipywidgets as widgets
+from IPython import display as idisplay
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 1[0m
-[0;32m----> 1[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124mmatplotlib[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m'[39m)
-[1;32m      2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmpl_toolkits[39;00m [38;5;28;01mimport[39;00m mplot3d
-[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m pyplot
+Cell [0;32mIn[1], line 5[0m
+[1;32m      1[0m [38;5;66;03m# Set up graphics environment[39;00m
+[1;32m      2[0m [38;5;66;03m#%matplotlib inline[39;00m
+[1;32m      3[0m [38;5;66;03m#%matplotlib notebook[39;00m
+[1;32m      4[0m [38;5;66;03m#import IPython[39;00m
+[0;32m----> 5[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124mmatplotlib[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mwidget[39m[38;5;124m'[39m)
+[1;32m      6[0m [38;5;66;03m#%matplotlib ipympl[39;00m
+[1;32m      7[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m pyplot
 
 File [0;32m~/anaconda3/envs/testW/lib/python3.11/site-packages/IPython/core/interactiveshell.py:2432[0m, in [0;36mInteractiveShell.run_line_magic[0;34m(self, magic_name, line, _stack_depth)[0m
 [1;32m   2430[0m     kwargs[[38;5;124m'[39m[38;5;124mlocal_ns[39m[38;5;124m'[39m] [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mget_local_scope(stack_depth)
