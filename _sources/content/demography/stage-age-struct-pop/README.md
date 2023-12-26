@@ -1,4 +1,5 @@
 # Stage- and Age- Structured Populations
 
-This is a placeholder for the stage-age structured population chapter.
+Use this link to launch the notebook in Binder:
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/seastate/CroakerASM/main?labpath=Croaker.ipynb)
