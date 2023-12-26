@@ -1,3 +1,9 @@
 [submodule "book/submodules/pyVRS"]
 	path = book/submodules/pyVRS
 	url = https://github.com/seastate/pyVRS
+[submodule "book/submodules/LarvalCloning"]
+	path = book/submodules/LarvalCloning
+	url = https://github.com/seastate/LarvalCloning
+[submodule "book/submodules/CroakerASM"]
+	path = book/submodules/CroakerASM
+	url = https://github.com/seastate/CroakerASM
