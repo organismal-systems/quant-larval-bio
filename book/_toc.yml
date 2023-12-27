@@ -13,6 +13,7 @@ parts:
       - file: content/overview/how-to-use/README.md      
       - file: content/overview/how-to-use/example.ipynb
       - file: content/overview/scale-models/README.md      
+      - file: submodules/qlb-notebooks/ReynoldsSphere.ipynb
   - caption: Biomechanics
     numbered: true
     chapters:
@@ -22,7 +23,6 @@ parts:
       sections: 
       - file: content/biomechanics/mol-trans-mechs/README.md
       - file: content/biomechanics/mech-larval-swim/README.md
-      - file: content/biomechanics/mech-larval-swim/ChimeraSwim.ipynb
       - file: submodules/pyVRS/ChimeraSwim.ipynb
   - caption: Demography
     numbered: true
@@ -33,6 +33,7 @@ parts:
       - file: submodules/LarvalCloning/LarvalCloningModel.ipynb
       - file: content/demography/specialist-generalist/README.md      
       - file: content/demography/stage-age-struct-pop/README.md      
+      - file: submodules/CroakerASM/Croaker.ipynb
   - caption: Spatial Dynamics
     numbered: true
     chapters:

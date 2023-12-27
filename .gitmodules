@@ -7,3 +7,6 @@
 [submodule "book/submodules/CroakerASM"]
 	path = book/submodules/CroakerASM
 	url = https://github.com/seastate/CroakerASM
+[submodule "book/submodules/qlb-notebooks"]
+	path = book/submodules/qlb-notebooks
+	url = https://github.com/seastate/qlb-notebooks
