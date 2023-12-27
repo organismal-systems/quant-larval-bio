@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>qlb-notebooks &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
+    <title>1.3. An example Jupyter notebook &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
   
   
   
@@ -62,9 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/qlb-notebooks/README';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/qlb-notebooks/example';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.4. Scale-models and nondimensional numbers in Larval Biology" href="../../content/overview/scale-models/README.html" />
+    <link rel="prev" title="1.2. How to use this book" href="../../content/overview/how-to-use/README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -161,10 +163,10 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/overview/README.html">1. Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../content/overview/README.html">1. Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../content/overview/how-to-use/README.html">1.2. How to use this book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="example.html">1.3. An example Jupyter notebook</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.3. An example Jupyter notebook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../content/overview/scale-models/README.html">1.4. Scale-models and nondimensional numbers in Larval Biology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ReynoldsSphere.html">1.5. Movement of spherical particles in fluid: Analyses using the Reynolds number</a></li>
 </ul>
@@ -280,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/organismal-systems/quant-larval-bio/issues/new?title=Issue%20on%20page%20%2Fsubmodules/qlb-notebooks/README.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/organismal-systems/quant-larval-bio/issues/new?title=Issue%20on%20page%20%2Fsubmodules/qlb-notebooks/example.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +312,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/submodules/qlb-notebooks/README.md" target="_blank"
+      <li><a href="../../_sources/submodules/qlb-notebooks/example.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -320,7 +322,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -381,7 +383,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -392,11 +396,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>qlb-notebooks</h1>
+    <h1>An example Jupyter notebook</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code-cells">1.3.1. Python code cells</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -406,9 +418,125 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="qlb-notebooks">
-<h1>qlb-notebooks<a class="headerlink" href="#qlb-notebooks" title="Permalink to this heading">#</a></h1>
-<p>A repository for standalone Jupyter notebooks for the Quantitative Larval Biology executable book</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="an-example-jupyter-notebook">
+<h1><span class="section-number">1.3. </span>An example Jupyter notebook<a class="headerlink" href="#an-example-jupyter-notebook" title="Permalink to this heading">#</a></h1>
+<p>This is an example of a Jupyter notebook, intended to demonstrate a few of the properties that make these notebooks useful for executable books.
+This notebook can be run online via <a class="reference external" href="https://mybinder.org/v2/gh/seastate/qlb-notebooks/main?labpath=example.ipynb">Binder</a>, by clicking on the button below:</p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/seastate/qlb-notebooks/main?labpath=ReynoldsSphere.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p>Alternatively, it can be run directly on your own machine if you have JupyterLab set up, by cloning the <a class="reference external" href="https://github.com/seastate/qlb-notebooks">qlb-notebooks</a> repository or the source materials for this <a class="reference external" href="https://github.com/organismal-systems/quant-larval-bio">book</a>.</p>
+<p>Jupyter notebooks are composed of <em>cells</em>.
+To execute a cell, make it the active cell by clicking on it, and either type <em>shift-enter</em> or select <em>Run Selected Cells</em> from the <em>Run</em> menu at the top of the page.</p>
+<p>The sentences you are reading are in a cell of type “Markdown”.
+As the name suggests, the content of this cell is coded in the formatting language Markdown, and when executed is rendered as a formatted display.</p>
+<p>To see the Markdown code, click on the blue vertical bar at left, then type the letter “m” on your keyboard (or just double-click on the cell).
+The cell will now show the original Markdown code.
+Now you are able, for example, to edit words and links in the cell.</p>
+<p>To re-render it, execute the cell by typing <em>shift-enter</em>.
+Now you see the formatted display.</p>
+<section id="python-code-cells">
+<h2><span class="section-number">1.3.1. </span>Python code cells<a class="headerlink" href="#python-code-cells" title="Permalink to this heading">#</a></h2>
+<p>The cell below is a <em>Code</em> cell, containing Python commands to be run when the cell is executed (as always, by typing <em>shift-enter</em>).</p>
+<p>In Jupyter Lab, the commands in code cells can be hidden by clicking on the blue vertical bar at left, leaving only three small dots visible.
+The output remains visible below in its own cell.</p>
+<p>This is convenient when there is a lot of code that would be distracting in ordinary usage of the notebook.
+For example, the parameters in many models are set in textboxes (called “widgets”).
+This means users don’t need to interact directly with the code, but also that there is a substantial amount of code needed to set up the widgets.
+Hiding that code makes using the model more intuitive and visually appealing.
+To make the code visible, click on the blue vertical bar again.</p>
+<p>The output can also be hidden and exposed by clicking on the vertical bar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a simple test of whether your notebook is executing correctly: </span>
+<span class="c1"># Change the value of a or b and shift-enter.</span>
+<span class="c1"># The output should reflect your updated addition calculation.</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> + </span><span class="si">{}</span><span class="s1"> = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 + 3 = 5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This cell shows an example of defining a Python class, in this case representing a </span>
+<span class="c1"># spherical marine invertebrate egg, with some calculated properties.</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span> <span class="c1"># import the value of pi from the math module</span>
+<span class="k">class</span> <span class="nc">Egg</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; An example of a class definition in Python, that facilitates calculating</span>
+<span class="sd">        the surface area and volume of a spherical egg given its diameter.</span>
+<span class="sd">        If the parameter d is not supplied, it defaults to d=1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Create an Egg instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">d</span>            <span class="c1"># save the diameter as an attribute of the egg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span>          <span class="c1"># calculate the radius</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">d</span><span class="o">**</span><span class="mi">2</span>    <span class="c1"># calculate the surface area</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">V</span> <span class="o">=</span> <span class="n">pi</span><span class="o">/</span><span class="mi">6</span> <span class="o">*</span> <span class="n">d</span><span class="o">**</span><span class="mi">3</span>  <span class="c1"># calculate the volume</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An example of using an instance of the Egg class.</span>
+<span class="n">egg</span> <span class="o">=</span> <span class="n">Egg</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The surface area of an egg of diameter </span><span class="si">{</span><span class="n">egg</span><span class="o">.</span><span class="n">d</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="n">egg</span><span class="o">.</span><span class="n">A</span><span class="si">}</span><span class="s1"> and its volume is </span><span class="si">{</span><span class="n">egg</span><span class="o">.</span><span class="n">V</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The surface area of an egg of diameter 2 is 12.566370614359172 and its volume is 4.1887902047863905
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now let&#39;s look at some plotting examples. Here is an example of making a list of diameters,</span>
+<span class="c1"># using that to make lists of volumes and areas, and then making a plot of area and volume as</span>
+<span class="c1"># functions of diameter.</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># import the pyplot graphics library</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>                       <span class="c1"># use interactive plotting mode</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="o">*</span><span class="p">(</span><span class="n">d</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">150</span><span class="p">)]</span>
+<span class="n">As</span> <span class="o">=</span> <span class="p">[</span><span class="n">Egg</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">.</span><span class="n">A</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">ds</span><span class="p">]</span>
+<span class="n">Vs</span> <span class="o">=</span> <span class="p">[</span><span class="n">Egg</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">.</span><span class="n">V</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">ds</span><span class="p">]</span>
+<span class="c1"># Create a plot object, and add the first subplot</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="c1"># Plot area and volume against diameter, on a linear axis</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="n">As</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Area&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="n">Vs</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Volume&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="c1"># Plot area and volume against diameter, on a log axis</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="n">As</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Area&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="n">Vs</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Volume&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/9794b800f799b6dbe116635c6cf321f28c5817d19ab83d75b4fe8da415c9582b.png" src="../../_images/9794b800f799b6dbe116635c6cf321f28c5817d19ab83d75b4fe8da415c9582b.png" />
+</div>
+</div>
+<p>The plots above demonstrate several things.
+First, if they are visible, they show your Jupyter notebook is executing correctly.</p>
+<p>Secondly, they provide examples of using a model (in this case, a very simple model
+of egg characteristics) to make a systematic study of variation of key model results across a range of input variables.
+This sytematic use of models to understand cause and effect, analogous to systematic variation of parameters in experimental design, is one of the most important yet widely underappreciated uses of models.</p>
+<p>Thirdly, they illustrate that a very orderly pattern of variation exists in area and volume as functions of diameter – area and volume are simple lines as functions of diameter on a log-log plot – but the simplicity of this variation is obvious only when scaled and plotted in a specific way.</p>
+<p>All three of these are important ideas to carry forward in using this book.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -441,12 +569,44 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../../content/overview/how-to-use/README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.2. </span>How to use this book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../content/overview/scale-models/README.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.4. </span>Scale-models and nondimensional numbers in Larval Biology</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code-cells">1.3.1. Python code cells</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
