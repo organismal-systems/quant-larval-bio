@@ -13,6 +13,7 @@ parts:
       - file: content/overview/how-to-use/README.md      
       - file: submodules/qlb-notebooks/example.ipynb
       - file: content/overview/scale-models/README.md      
+      - file: submodules/qlb-notebooks/scale-models.ipynb
       - file: submodules/qlb-notebooks/ReynoldsSphere.ipynb
   - caption: Biomechanics
     numbered: true
