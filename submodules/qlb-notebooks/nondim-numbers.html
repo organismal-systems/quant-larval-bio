@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.3. An example Jupyter notebook &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
+    <title>1.6. Non-dimensional numbers &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
   
   
   
@@ -62,11 +62,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/qlb-notebooks/example';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/qlb-notebooks/nondim-numbers';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.4. Scale-models and nondimensional numbers in Larval Biology" href="../../content/overview/scale-models/README.html" />
-    <link rel="prev" title="1.2. How to use this book" href="../../content/overview/how-to-use/README.html" />
+    <link rel="next" title="1.7. Movement of spherical particles in fluid: Analyses using the Reynolds number" href="ReynoldsSphere.html" />
+    <link rel="prev" title="1.5. Scale models and dynamic similarity" href="scale-models.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,10 +168,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../content/overview/README.html">1. Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../content/overview/how-to-use/README.html">1.2. How to use this book</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.3. An example Jupyter notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">1.3. An example Jupyter notebook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../content/overview/scale-models/README.html">1.4. Scale-models and nondimensional numbers in Larval Biology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scale-models.html">1.5. Scale models and dynamic similarity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nondim-numbers.html">1.6. Non-dimensional numbers</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.6. Non-dimensional numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ReynoldsSphere.html">1.7. Movement of spherical particles in fluid: Analyses using the Reynolds number</a></li>
 </ul>
 </li>
@@ -284,7 +286,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/organismal-systems/quant-larval-bio/issues/new?title=Issue%20on%20page%20%2Fsubmodules/qlb-notebooks/example.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/organismal-systems/quant-larval-bio/issues/new?title=Issue%20on%20page%20%2Fsubmodules/qlb-notebooks/nondim-numbers.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -314,7 +316,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/submodules/qlb-notebooks/example.ipynb" target="_blank"
+      <li><a href="../../_sources/submodules/qlb-notebooks/nondim-numbers.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -398,7 +400,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>An example Jupyter notebook</h1>
+    <h1>Non-dimensional numbers</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -408,7 +410,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code-cells">1.3.1. Python code cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.6.1. Non-dimensional numbers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nothing-is-big-or-small-by-itself">1.6.1.1. Nothing is big or small by itself</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-did-we-just-do">1.6.1.1.1. What did we just do?</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -420,127 +428,87 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="an-example-jupyter-notebook">
-<h1><span class="section-number">1.3. </span>An example Jupyter notebook<a class="headerlink" href="#an-example-jupyter-notebook" title="Permalink to this heading">#</a></h1>
-<p>This is an example of a Jupyter notebook, intended to demonstrate a few of the properties that make these notebooks useful for executable books.
-This notebook can be run online via <a class="reference external" href="https://mybinder.org/v2/gh/seastate/qlb-notebooks/main?labpath=example.ipynb">Binder</a>, by clicking on the button below:</p>
-<p><a class="reference external" href="https://mybinder.org/v2/gh/seastate/qlb-notebooks/main?labpath=ReynoldsSphere.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
-<p>Note that when you open a notebook on Binder, the Python environment in which the notebook runs must be loaded before it can execute.
-Depending on its size and how many other users are on Binder, this can take a few minutes.</p>
-<p>Alternatively, it can be run directly on your own machine if you have JupyterLab set up, by cloning the <a class="reference external" href="https://github.com/seastate/qlb-notebooks">qlb-notebooks</a> repository or the source materials for this <a class="reference external" href="https://github.com/organismal-systems/quant-larval-bio">book</a>.</p>
-<p>Jupyter notebooks are composed of <em>cells</em>.
-To execute a cell, make it the active cell by clicking on it, and either type <em>shift-enter</em> or select <em>Run Selected Cells</em> from the <em>Run</em> menu at the top of the page.</p>
-<p>The sentences you are reading are in a cell of type “Markdown”.
-This is indicated (and, if need be, selected) in the drop-down menu at the top of the page.
-As the name suggests, the content of this cell is coded in the formatting language Markdown, and when executed is rendered as a formatted display.</p>
-<p>To see the Markdown code, click on the blue vertical bar at left, then type the letter “m” on your keyboard (or just double-click on the cell).
-The cell will now show the original Markdown code.
-Now you are able, for example, to edit words and links in the cell.</p>
-<p>To re-render it, execute the cell by typing <em>shift-enter</em>.
-Now you see the formatted display.</p>
-<section id="python-code-cells">
-<h2><span class="section-number">1.3.1. </span>Python code cells<a class="headerlink" href="#python-code-cells" title="Permalink to this heading">#</a></h2>
-<p>The cell below is a <em>Code</em> cell, containing Python commands to be run when the cell is executed (as always, by typing <em>shift-enter</em>).</p>
-<p>In Jupyter Lab, the commands in code cells can be hidden by clicking on the blue vertical bar at left, leaving only three small dots visible.
-The output remains visible below in its own cell.</p>
-<p>This is convenient when there is a lot of code that would be distracting in ordinary usage of the notebook.
-For example, the parameters in many models are set in textboxes (called “widgets”).
-This means users don’t need to interact directly with the code, but also that there is a substantial amount of code needed to set up the widgets.
-Hiding that code makes using the model more intuitive and visually appealing.
-To make the code visible, click on the blue vertical bar again.</p>
-<p>The output can also be hidden and exposed by clicking on the vertical bar.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is a simple test of whether your notebook is executing correctly: </span>
-<span class="c1"># Change the value of a or b and shift-enter.</span>
-<span class="c1"># The output should reflect your updated addition calculation.</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> + </span><span class="si">{}</span><span class="s1"> = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 + 3 = 5
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This cell shows an example of defining a Python class, in this case representing a </span>
-<span class="c1"># spherical marine invertebrate egg, with some calculated properties.</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span> <span class="c1"># import the value of pi from the math module</span>
-<span class="k">class</span> <span class="nc">Egg</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; An example of a class definition in Python, that facilitates calculating</span>
-<span class="sd">        the surface area and volume of a spherical egg given its diameter.</span>
-<span class="sd">        If the parameter d is not supplied, it defaults to d=1</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot; Create an Egg instance.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">d</span>            <span class="c1"># save the diameter as an attribute of the egg</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span>          <span class="c1"># calculate the radius</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">A</span> <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">d</span><span class="o">**</span><span class="mi">2</span>    <span class="c1"># calculate the surface area</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">V</span> <span class="o">=</span> <span class="n">pi</span><span class="o">/</span><span class="mi">6</span> <span class="o">*</span> <span class="n">d</span><span class="o">**</span><span class="mi">3</span>  <span class="c1"># calculate the volume</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An example of using an instance of the Egg class.</span>
-<span class="n">egg</span> <span class="o">=</span> <span class="n">Egg</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The surface area of an egg of diameter </span><span class="si">{</span><span class="n">egg</span><span class="o">.</span><span class="n">d</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="n">egg</span><span class="o">.</span><span class="n">A</span><span class="si">}</span><span class="s1"> and its volume is </span><span class="si">{</span><span class="n">egg</span><span class="o">.</span><span class="n">V</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The surface area of an egg of diameter 2 is 12.566370614359172 and its volume is 4.1887902047863905
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now let&#39;s look at some plotting examples. Here is an example of making a list of diameters,</span>
-<span class="c1"># using that to make lists of volumes and areas, and then making a plot of area and volume as</span>
-<span class="c1"># functions of diameter.</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># import the pyplot graphics library</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>                       <span class="c1"># use interactive plotting mode</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="o">*</span><span class="p">(</span><span class="n">d</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">150</span><span class="p">)]</span>
-<span class="n">As</span> <span class="o">=</span> <span class="p">[</span><span class="n">Egg</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">.</span><span class="n">A</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">ds</span><span class="p">]</span>
-<span class="n">Vs</span> <span class="o">=</span> <span class="p">[</span><span class="n">Egg</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">.</span><span class="n">V</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">ds</span><span class="p">]</span>
-<span class="c1"># Create a plot object, and add the first subplot</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="c1"># Plot area and volume against diameter, on a linear axis</span>
-<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="n">As</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Area&#39;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="n">Vs</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Volume&#39;</span><span class="p">)</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="c1"># Plot area and volume against diameter, on a log axis</span>
-<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="n">As</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Area&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span><span class="n">Vs</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Volume&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/cfe1d919c2460a60a6449582d09d133a804c7078ca68534f01b1db0d21ba2b5f.png" src="../../_images/cfe1d919c2460a60a6449582d09d133a804c7078ca68534f01b1db0d21ba2b5f.png" />
-</div>
-</div>
-<p>The plots above demonstrate several things.
-First, if they are visible, they show your Jupyter notebook is executing correctly.</p>
-<p>Secondly, they provide examples of using a model (in this case, a very simple model
-of egg characteristics) to make a systematic study of variation of key model results across a range of input variables.
-This sytematic use of models to understand cause and effect, analogous to systematic variation of parameters in experimental design, is one of the most important yet widely underappreciated uses of models.</p>
-<p>Thirdly, they illustrate that a very orderly pattern of variation exists in area and volume as functions of diameter – area and volume are simple lines as functions of diameter on a log-log plot – but the simplicity of this variation is obvious only when scaled and plotted in a specific way.</p>
-<p>All three of these are important ideas to carry forward in using this book.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="non-dimensional-numbers">
+<h1><span class="section-number">1.6. </span>Non-dimensional numbers<a class="headerlink" href="#non-dimensional-numbers" title="Permalink to this heading">#</a></h1>
+<section id="id1">
+<h2><span class="section-number">1.6.1. </span>Non-dimensional numbers<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>The idea of <em>proportions generalized to include both geometries and forces</em> is most practical to work with using <strong>non-dimensional numbers</strong>.
+Dimensions, in this context, refers to measurements in physical units (such as SI units: meters, seconds, kilograms, etc.).
+“Non-dimensional numbers” is somewhat strange terminology, because by nature pure numbers are not associated with any physical dimensions.
+In this context, though, “non-dimensional” refers to ratios that have no dimensions because the units of the numerator are the same as the units of the denominator.
+That is, <strong>non-dimensional numbers are composed of factors with units (lengths, times, masses, etc.) but they are nonetheless non-dimensional because the units of their factors cancel.</strong></p>
+<p>Many non-dimensional numbers have been devised in diverse fields of science.
+Some of these are listed, together with their physical interpretations, in <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_dimensionless_quantities">this Wikipedia page</a>.</p>
+<p>Non-dimensional numbers are useful in quantitative sciences for two reasons:</p>
+<ol class="arabic simple">
+<li><p>Many phenomena are governed by non-dimensional combinations of parameters, which is made explicit in the form of non-dimensional numbers.
+By using non-dimensional numbers as “meta” parameters, these phenomena can be understood and predicted using far fewer variables than in the original dimensional form.</p></li>
+<li><p>Non-dimensional numbers in which the denominator and the numerator reflect different mechanisms can be indicators of the relative importance of those mechanisms, across variation in important parameters such as size, speed, duration, etc.</p></li>
+</ol>
+<p>Because non-dimensional numbers are not intuitive the first few times they are encountered, it’s worth delving into some further explanation of these ideas.</p>
+<section id="nothing-is-big-or-small-by-itself">
+<h3><span class="section-number">1.6.1.1. </span>Nothing is big or small by itself<a class="headerlink" href="#nothing-is-big-or-small-by-itself" title="Permalink to this heading">#</a></h3>
+<p>A good starting point for thinking about non-dimensional numbers is to consider the fact that adjectives like big, small, fast, slow, etc. are <em>relative</em> descriptions.</p>
+<p>That is, nothing is big or small except in comparison to something else.
+In our ordinary thinking, that something else is a standard set of units.
+For example, the fundamental SI unit for length is the meter.
+An object a kilometer long is “big” compared to a meter – it’s equal to 1000 of them.
+An object a micron long is “small”, because it’s only 1/1000th of a meter.</p>
+<p>Suppose, instead, we adopt a complementary perspective, in which the basis for comparison comes from the object itself.
+This depends on finding what are called <strong>characteristic values</strong>.
+Characteristic values could include a length, speed or duration that emerges from the object or its interations with its surroundings.
+These characteristic values specify a subset chosen from a set of scale models.</p>
+<p>Let’s begin with an intentionally simplified example, that we completely understand:
+In the previous page, we considered the surface area, <span class="math notranslate nohighlight">\(A\)</span>, and volume, <span class="math notranslate nohighlight">\(V\)</span>, of a spherical egg.
+All spheres are scale models of each other.
+Across the set of spheres, there is a single parameter, the diameter <span class="math notranslate nohighlight">\(d\)</span>, to specify a unique sphere.
+Knowing <span class="math notranslate nohighlight">\(d\)</span>, we can calculate the surface area and volume using the formulas</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A = \pi d^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V = \frac{\pi}{6} d^3\)</span></p></li>
+</ul>
+<p>Let’s consider using a non-dimensional ratio to express these formulas, in a more general form with fewer parameters.
+We’ll start by choosing a characteristic length, <span class="math notranslate nohighlight">\(L\)</span>.
+The geometry of the egg suggests that the most useful choice of characteristic value is the length scale corresponding to the diameter,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(L = d\)</span>.</p></li>
+</ul>
+<p>From this characteristic length <span class="math notranslate nohighlight">\(d\)</span>, we can substitute into the formulas for <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(V\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A = \pi L^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V = \frac{\pi}{6} L^3\)</span></p></li>
+</ul>
+<p>Dividing by <span class="math notranslate nohighlight">\(L^2\)</span> and <span class="math notranslate nohighlight">\(L^3\)</span> respectively,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{A}{L^2} = \pi\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{V}{L^3} = \frac{\pi}{6}\)</span></p></li>
+</ul>
+<p>Note that <span class="math notranslate nohighlight">\(L^2\)</span> is the area of a square of length <span class="math notranslate nohighlight">\(L\)</span> on each side, and <span class="math notranslate nohighlight">\(L^3\)</span> is the volume of a cube of length <span class="math notranslate nohighlight">\(L\)</span> on each edge.</p>
+<p>These expressions show that in terms of the variables <span class="math notranslate nohighlight">\(\hat{A} = \frac{A}{L^2}\)</span> and <span class="math notranslate nohighlight">\(\hat{V} = \frac{V}{L^3}\)</span>, the area and volume are</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\hat{A} = \pi\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{V} = \frac{\pi}{6}\)</span></p></li>
+</ul>
+<p>That is, expressed in these new variables, the area and volume are constant.
+We have reduced the number of parameters from one to zero!</p>
+<section id="what-did-we-just-do">
+<h4><span class="section-number">1.6.1.1.1. </span>What did we just do?<a class="headerlink" href="#what-did-we-just-do" title="Permalink to this heading">#</a></h4>
+<p>In the lines above, we did not create any new formulas or data.
+The only thing we did was to change variables, to express the diameter, area and volume in terms of a characteristic length, <span class="math notranslate nohighlight">\(L\)</span>.</p>
+<p>As a result of this change in variables,</p>
+<ul class="simple">
+<li><p>All the effects of <strong>size</strong> are encapsulated in the length scale, <span class="math notranslate nohighlight">\(L\)</span>.</p></li>
+<li><p>All the effects of <strong>shape</strong> are encapsulated in the constants <span class="math notranslate nohighlight">\(\hat{A}\)</span> and <span class="math notranslate nohighlight">\(\hat{V}\)</span>.</p></li>
+</ul>
+<p>The shape effects hold for all spheres.
+The result that one constant summarizes the surface area or volume of all spheres is a simplification from a list of measured volumes, and even from the formua that specifies it as a function of an infinite spectrum of diameters.</p>
+<p>Because this formulation separates the effects of size from those of shape, we can expect that for this principle applies to any shape.
+For example, if the basic shape is an ellipsiod, a dodecahedron, or a lobster, the shape factor will be a new constant, but size effects will obey equations of the same form.</p>
+<p>As stated, this example started with an extremely simple calculation, which the analysis made still simpler.
+The real utility of non-dimensionalization is found in application to more complex problems, in which there are many independent variables and for which no formulas are available.
+In these cases, including examples found in the following chapters of this book, a reduction in the number of parameters and an orderly separation of effects of different elements of the problem can be very useful and insightful.</p>
+</section>
+</section>
 </section>
 </section>
 
@@ -575,20 +543,20 @@ This sytematic use of models to understand cause and effect, analogous to system
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../content/overview/how-to-use/README.html"
+       href="scale-models.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.2. </span>How to use this book</p>
+        <p class="prev-next-title"><span class="section-number">1.5. </span>Scale models and dynamic similarity</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../content/overview/scale-models/README.html"
+       href="ReynoldsSphere.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.4. </span>Scale-models and nondimensional numbers in Larval Biology</p>
+        <p class="prev-next-title"><span class="section-number">1.7. </span>Movement of spherical particles in fluid: Analyses using the Reynolds number</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -607,7 +575,13 @@ This sytematic use of models to understand cause and effect, analogous to system
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code-cells">1.3.1. Python code cells</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.6.1. Non-dimensional numbers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nothing-is-big-or-small-by-itself">1.6.1.1. Nothing is big or small by itself</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-did-we-just-do">1.6.1.1.1. What did we just do?</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

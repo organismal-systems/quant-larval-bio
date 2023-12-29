@@ -7,9 +7,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.5. Scale models and non-dimensional numbers &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
+    <title>1.5. Scale models and dynamic similarity &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
   
   
   
@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/qlb-notebooks/scale-models';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.7. Movement of spherical particles in fluid: Analyses using the Reynolds number" href="ReynoldsSphere.html" />
+    <link rel="next" title="1.6. Non-dimensional numbers" href="nondim-numbers.html" />
     <link rel="prev" title="1.4. Scale-models and nondimensional numbers in Larval Biology" href="../../content/overview/scale-models/README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -170,8 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../content/overview/how-to-use/README.html">1.2. How to use this book</a></li>
 <li class="toctree-l2"><a class="reference internal" href="example.html">1.3. An example Jupyter notebook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../content/overview/scale-models/README.html">1.4. Scale-models and nondimensional numbers in Larval Biology</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.5. Scale models and non-dimensional numbers</a></li>
-
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.5. Scale models and dynamic similarity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nondim-numbers.html">1.6. Non-dimensional numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ReynoldsSphere.html">1.7. Movement of spherical particles in fluid: Analyses using the Reynolds number</a></li>
 </ul>
 </li>
@@ -400,7 +400,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Scale models and non-dimensional numbers</h1>
+    <h1>Scale models and dynamic similarity</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -410,22 +410,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.5. Scale models and non-dimensional numbers</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-models">1.5.1. Scale models</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-similarity">1.5.1.1. Dynamic similarity</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#non-dimensional-numbers">1.6. Non-dimensional numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nothing-is-big-or-small-by-itself">1.6.1. Nothing is big or small by itself</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-did-we-just-do">1.6.1.1. What did we just do?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-similarity">1.5.1.1. Dynamic similarity</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ship-model-basins">1.5.1.1.1. Ship model basins</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-does-the-froud-number-determine-dynamic-similarity-for-ships-and-ship-models">1.5.1.1.2. Why does the Froud number determine dynamic similarity for ships and ship models?</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -436,8 +429,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="scale-models-and-non-dimensional-numbers">
-<h1><span class="section-number">1.5. </span>Scale models and non-dimensional numbers<a class="headerlink" href="#scale-models-and-non-dimensional-numbers" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="scale-models-and-dynamic-similarity">
+<h1><span class="section-number">1.5. </span>Scale models and dynamic similarity<a class="headerlink" href="#scale-models-and-dynamic-similarity" title="Permalink to this heading">#</a></h1>
 <section id="scale-models">
 <h2><span class="section-number">1.5.1. </span>Scale models<a class="headerlink" href="#scale-models" title="Permalink to this heading">#</a></h2>
 <p>Much of the discussion in this book involves scale models and non-dimensional numbers.
@@ -518,82 +511,72 @@ However, the relative motion of the water waves and model are out of proportion 
 <p>That is, the forces moving the ship and the forces moving the water are not dynamically similar.
 It is our intuition based on many experiences watching lakes, oceans, pools and other water bodies that give us a sense of scale for waves.
 The model gives little indication of its size, but the size scale suggested by our intuition for the water waves tells us that the model is only about a meter long (it’s actually a 1:212 scale model, with a length of roughly 1.25m).</p>
+<section id="ship-model-basins">
+<h4><span class="section-number">1.5.1.1.1. </span>Ship model basins<a class="headerlink" href="#ship-model-basins" title="Permalink to this heading">#</a></h4>
+<p>For comparison, let’s take a look at a <a class="reference external" href="https://en.wikipedia.org/wiki/Ship_model_basin">ship model basin</a>, also known as a “tow tank”.
+A ship model basin is a facility for inferring characteristics of full sized ship, from measurements of motions and forces on much smaller scale models.
+The video below shows some sequences of a scale model ship being towed as part of an engineering study:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This displays a video posted of the [QinetiQ Ship Tank](https://www.qinetiq.com)</span>
+<span class="n">display_yotube_video</span><span class="p">(</span><span class="s2">&quot;https://www.youtube.com/watch?v=OD4ApYYtRaQ&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+        <iframe
+            width="800"
+            height="600"
+            src="https://www.youtube.com/embed/OD4ApYYtRaQ"
+            frameborder="0"
+            allowfullscreen
+            
+        ></iframe>
+        </div></div>
+</div>
+<p>This video shows water interactions with the moving ship model in great detail.
+The bow and stern waves from this model are dramatically more reminiscent of those from a full sized ship than the first video.
+In fact, if it were not for the person on the moving gantry, it would be difficult to estimate the size of the scale model from observing its interactions with the water.
+<strong>The difference betwen the two videos is that the second model is set up by engineers to be dynamically similar, while the first model is not.</strong></p>
+<p>The criterion an engineer used to determine dynamic similarity is called the <a class="reference external" href="https://en.wikipedia.org/wiki/Froude_number">Froud number</a>, abbreviated as <span class="math notranslate nohighlight">\(\cal{Fr}\)</span>.
+The Froud number associated with a full sized ship  of length <span class="math notranslate nohighlight">\(L\)</span> sailing on the ocean at speed <span class="math notranslate nohighlight">\(U\)</span> is defined as</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\({\cal{Fr}} = \frac{U}{\sqrt{g L}}\)</span></p></li>
+</ul>
+<p>Here, <span class="math notranslate nohighlight">\(g\)</span> is gravitational acceleration.</p>
+<p>If a scale model of the ship which has length <span class="math notranslate nohighlight">\(L_{model}\)</span> travels at speed <span class="math notranslate nohighlight">\(U_{model}\)</span>, its Froud number is</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\({\cal{Fr_{model}}} = \frac{U_{model}}{\sqrt{g L_{model}}}\)</span></p></li>
+</ul>
+<p>When</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\({\cal{Fr}} = {\cal{Fr_{model}}}\)</span></p></li>
+</ul>
+<p>the full sized ship and the model are dynamically similar.
+This is the condition created by the engineers in the second video.
+As you can see, the resulting water motion resembles that around a real ship much more than the dynamically dis-similar model in the first video.</p>
 </section>
+<section id="why-does-the-froud-number-determine-dynamic-similarity-for-ships-and-ship-models">
+<h4><span class="section-number">1.5.1.1.2. </span>Why does the Froud number determine dynamic similarity for ships and ship models?<a class="headerlink" href="#why-does-the-froud-number-determine-dynamic-similarity-for-ships-and-ship-models" title="Permalink to this heading">#</a></h4>
+<p>The Froud number is based on the speed at which water waves travel.
+This speed is a function of their wavelength, <span class="math notranslate nohighlight">\(L_w\)</span> (the distance between neighboring crests): water waves’ speed is (in the ideal case) proportional to <span class="math notranslate nohighlight">\(\sqrt{L_w}\)</span> (and to <span class="math notranslate nohighlight">\(g\)</span>, the gravitational acceleration).
+The Froud number is the ratio of the full sized ship’s speed, divided by the estimated speed of a wave equal in length to the ship.</p>
+<p>Why do the relative lengths of the ship and wave matter?
+It is because a moving ship generates waves traveling around the same speed it’s traveling.
+That means a slow ship is generating slow, short waves.
+As the ship increases speed, it generates faster, longer waves.</p>
+<p>A ship can effectively “straddle” and plow through waves that are much shorter than its hull.
+However, when a wave starts to get to as long or longer than the hull, the ship’s stern gets caught in the trough while the bow is raised in the crest.
+That means that, in effect, the ship is continuously going uphill!
+When this happens, an increase in propulsive power just adds to the size of the wave being generated – it has almost no effect on ship speed.</p>
+<p>In effect, the length of the hull imposes a “speed limit” – the speed of waves as long as the ship.
+This is known as the <em>hull speed</em>.
+The faster hull speeds of longer vessels is one of the reasons racing shells, hunting kayaks, container ships and many other watercraft for which speed is important tend to be long.</p>
+<p>The Froud number, <span class="math notranslate nohighlight">\(\cal{Fr}\)</span>, is a ship’s speed expressed as a fraction of its hull speed.
+A model with matching Froud number – that is, traveling at the same fraction of its hull speed – will both in appearance and in the quantitative measures of force and motion match the full sized ship.
+That is, the ship and model will be dynamically similar.</p>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="non-dimensional-numbers">
-<h1><span class="section-number">1.6. </span>Non-dimensional numbers<a class="headerlink" href="#non-dimensional-numbers" title="Permalink to this heading">#</a></h1>
-<p>The idea of <em>proportions generalized to include both geometries and forces</em> is most practical to work with using <strong>non-dimensional numbers</strong>.
-Dimensions, in this context, refers to measurements in physical units (such as SI units: meters, seconds, kilograms, etc.).
-“Non-dimensional numbers” is somewhat strange terminology, because by nature pure numbers are not associated with any physical dimensions.
-In this context, though, “non-dimensional” refers to ratios that have no dimensions because the units of the numerator are the same as the units of the denominator.</p>
-<p>Non-dimensional numbers are useful in quantitative sciences for two reasons:</p>
-<ol class="arabic simple">
-<li><p>Many phenomena are governed by non-dimensional combinations of parameters, which is made explicit in the form of non-dimensional numbers.
-By using non-dimensional numbers as “meta” parameters, these phenomena can be understood and predicted using far fewer variables than in the original dimensional form.</p></li>
-<li><p>Non-dimensional numbers in which the denominator and the numerator reflect different mechanisms can be indicators of the relative importance of those mechanisms, across variation in important parameters such as size, speed, duration, etc.</p></li>
-</ol>
-<p>Because non-dimensional numbers are not intuitive the first few times they are encountered, it’s worth delving into some further explanation of these ideas.</p>
-<section id="nothing-is-big-or-small-by-itself">
-<h2><span class="section-number">1.6.1. </span>Nothing is big or small by itself<a class="headerlink" href="#nothing-is-big-or-small-by-itself" title="Permalink to this heading">#</a></h2>
-<p>A good starting point for thinking about non-dimensional numbers is to consider the fact that adjectives like big, small, fast, slow, etc. are <em>relative</em> descriptions.</p>
-<p>That is, nothing is big or small except in comparison to something else.
-In our ordinary thinking, that something else is a standard set of units.
-For example, the fundamental SI unit for length is the meter.
-An object a kilometer long is “big” compared to a meter – it’s equal to 1000 of them.
-An object a micron long is “small”, because it’s only 1/1000th of a meter.</p>
-<p>Suppose, instead, we adopt a complementary perspective, in which the basis for comparison comes from the object itself.
-This depends on finding what are called <strong>characteristic values</strong>.
-Characteristic values could include a length, speed or duration that emerges from the object or its interations with its surroundings.
-These characteristic values specify a subset chosen from a set of scale models.</p>
-<p>Let’s begin with an intentionally simplified example, that we completely understand:
-In the previous page, we considered the surface area, <span class="math notranslate nohighlight">\(A\)</span>, and volume, <span class="math notranslate nohighlight">\(V\)</span>, of a spherical egg.
-All spheres are scale models of each other.
-Across the set of spheres, there is a single parameter, the diameter <span class="math notranslate nohighlight">\(d\)</span>, to specify a unique sphere.
-Knowing <span class="math notranslate nohighlight">\(d\)</span>, we can calculate the surface area and volume using the formulas</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(A = \pi d^2\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(V = \frac{\pi}{6} d^3\)</span></p></li>
-</ul>
-<p>Let’s consider using a non-dimensional ratio to express these formulas, in a more general form with fewer parameters.
-We’ll start by choosing a characteristic length, <span class="math notranslate nohighlight">\(L\)</span>.
-The geometry of the egg suggests that the most useful choice of characteristic value is the length scale corresponding to the diameter,</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(L = d\)</span>.</p></li>
-</ul>
-<p>From this characteristic length <span class="math notranslate nohighlight">\(d\)</span>, we can substitute into the formulas for <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(V\)</span>:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(A = \pi L^2\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(V = \frac{\pi}{6} L^3\)</span></p></li>
-</ul>
-<p>Dividing by <span class="math notranslate nohighlight">\(L^2\)</span> and <span class="math notranslate nohighlight">\(L^3\)</span> respectively,</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\frac{A}{L^2} = \pi\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\frac{V}{L^3} = \frac{\pi}{6}\)</span>
-Note that <span class="math notranslate nohighlight">\(L^2\)</span> is the area of a square of length <span class="math notranslate nohighlight">\(L\)</span> on each side, and <span class="math notranslate nohighlight">\(L^3\)</span> is the volume of a cube of length <span class="math notranslate nohighlight">\(L\)</span> on each edge.</p></li>
-</ul>
-<p>These expressions show that in terms of the variables <span class="math notranslate nohighlight">\(\hat{A} = \frac{A}{L^2}\)</span> and <span class="math notranslate nohighlight">\(\hat{V} = \frac{V}{L^3}\)</span>, the area and volume are</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\hat{A} = \pi\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\hat{V} = \frac{\pi}{6}\)</span></p></li>
-</ul>
-<p>That is, expressed in these new variables, the area and volume are constant.
-We have reduced the number of parameters from one to zero!</p>
-<section id="what-did-we-just-do">
-<h3><span class="section-number">1.6.1.1. </span>What did we just do?<a class="headerlink" href="#what-did-we-just-do" title="Permalink to this heading">#</a></h3>
-<p>In the lines above, we did not create any new formulas or data.
-The only thing we did was to change variables, to express the diameter, area and volume in terms of a characteristic length, <span class="math notranslate nohighlight">\(L\)</span>.</p>
-<p>As a result of this change in variables,</p>
-<ul class="simple">
-<li><p>All the effects of <strong>size</strong> are encapsulated in the length scale, <span class="math notranslate nohighlight">\(L\)</span>.</p></li>
-<li><p>All the effects of <strong>shape</strong> are encapsulated in the constants <span class="math notranslate nohighlight">\(\hat{A}\)</span> and <span class="math notranslate nohighlight">\(\hat{V}\)</span>.</p></li>
-</ul>
-<p>The shape effects hold for all spheres.
-The result that one constant summarizes the surface area or volume of all spheres is a simplification from a list of measured volumes, and even from the formua that specifies it as a function of an infinite spectrum of diameters.</p>
-<p>As stated, this example started with an extremely simple calculation, which the analysis made still simpler.
-The real utility of non-dimensionalization is found in application to more complex problems, in which there are many independent variables and for which no formulas are available.
-In these cases, including examples found in the following chapters of this book, a reduction in the number of parameters and an orderly separation of effects of different elements of the problem can be very useful and insightful.</p>
-<p>Add simple extension to other shapes, e.g. ellipsiods</p>
 </section>
 </section>
 </section>
@@ -638,11 +621,11 @@ In these cases, including examples found in the following chapters of this book,
       </div>
     </a>
     <a class="right-next"
-       href="ReynoldsSphere.html"
+       href="nondim-numbers.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.7. </span>Movement of spherical particles in fluid: Analyses using the Reynolds number</p>
+        <p class="prev-next-title"><span class="section-number">1.6. </span>Non-dimensional numbers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -661,22 +644,15 @@ In these cases, including examples found in the following chapters of this book,
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.5. Scale models and non-dimensional numbers</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scale-models">1.5.1. Scale models</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-similarity">1.5.1.1. Dynamic similarity</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#non-dimensional-numbers">1.6. Non-dimensional numbers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nothing-is-big-or-small-by-itself">1.6.1. Nothing is big or small by itself</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-did-we-just-do">1.6.1.1. What did we just do?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-similarity">1.5.1.1. Dynamic similarity</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ship-model-basins">1.5.1.1.1. Ship model basins</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-does-the-froud-number-determine-dynamic-similarity-for-ships-and-ship-models">1.5.1.1.2. Why does the Froud number determine dynamic similarity for ships and ship models?</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
