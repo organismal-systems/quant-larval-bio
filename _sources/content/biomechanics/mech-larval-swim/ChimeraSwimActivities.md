@@ -1,4 +1,4 @@
-# Mechanics of Larval Swimming
+# &#x1F6FC; Activities: Exploring effects of size and shape in Early Larval Swimming
 
 This is a placeholder.
 

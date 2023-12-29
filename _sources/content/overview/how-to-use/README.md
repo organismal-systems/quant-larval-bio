@@ -19,7 +19,7 @@ This flexibility in format and usage makes Jupyter books the best platform, at t
 ## Terms of Use
 The original content of this book can be freely downloaded and used under a **[Creative Commons 4.0 BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/4.0/)**. 
 This license allows you to *share* and *adapt* the content *for non-commercial purposes*, as long as you use proper *attribution* and *share* the resulting materials under the same license.
-The italicized terms and other significant details of this license are given in the linked text, a copy of which is also provided with source materials for the book.
+Definitions of the italicized terms and other significant details of this license are given in the linked text, a copy of which is also provided with source materials for the book.
 
 ## How to download and use this book
 This book is available online in multiple forms, each of which has its own uses.
