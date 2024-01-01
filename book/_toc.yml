@@ -25,7 +25,9 @@ parts:
       sections: 
       - file: content/biomechanics/mol-trans-mechs/README.md
       - file: content/biomechanics/mech-larval-swim/README.md
-      - file: submodules/pyVRS/ChimeraSwim.ipynb
+      #- file: submodules/pyVRS/ChimeraSwim.ipynb
+      - file: submodules/pyVRS/ChimeraSwim4.ipynb
+      - file: submodules/pyVRS/ChimeraDesign.ipynb
       - file: content/biomechanics/mech-larval-swim/ChimeraSwimActivities.md
   - caption: Demography
     numbered: true
