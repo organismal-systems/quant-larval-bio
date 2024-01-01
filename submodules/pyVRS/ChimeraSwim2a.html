@@ -1,0 +1,1036 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Swimming of early larval stages in still water and shear &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/pyVRS/ChimeraSwim2a';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../content/overview.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Approaches to Larval Biology -- Selected topics and executable examples</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../content/overview.html">
+                    Quantitative Approaches to Larval Biology: Selected topics and executable examples
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/overview/README.html">1. Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/overview/how-to-use/README.html">1.2. How to use this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../qlb-notebooks/example.html">1.3. An example Jupyter notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/overview/scale-models/README.html">1.4. Scale-models and nondimensional numbers in Larval Biology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../qlb-notebooks/scale-models.html">1.5. Scale models and non-dimensional numbers</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../qlb-notebooks/ReynoldsSphere.html">1.7. Movement of spherical particles in fluid: Analyses using the Reynolds number</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Biomechanics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/biomechanics/README.html">2. Biomechanics</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mol-trans-mechs/README.html">2.1. Molecular Transport Mechanisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mech-larval-swim/README.html">2.2. Mechanics of Larval Swimming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ChimeraSwim4.html">2.3. Swimming of early larval stages in still water and shear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ChimeraDesign.html">2.4. Design and save early larval morphologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mech-larval-swim/ChimeraSwimActivities.html">2.5. 🛼 Activities: Exploring effects of size and shape in Early Larval Swimming</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demography</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/demography/README.html">3. Demography</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/demography/larval-cloning/README.html">3.1. Larval Cloning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LarvalCloning/LarvalCloningModel.html">3.2. Demographic implications of cloning in marine invertebrate larvae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/demography/specialist-generalist/README.html">3.3. Specialist vs. Generalist Life Histories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/demography/stage-age-struct-pop/README.html">3.4. Stage- and Age- Structured Populations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CroakerASM/Croaker.html">3.5. Understanding life history dynamics in structured populations with a stage-within-age matrix model</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Spatial Dynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/spatial-dynamics/README.html">4. Spatial Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/spatial-dynamics/persist-extinct/README.html">4.1. Effects of Scale on Persistence and Extinction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/spatial-dynamics/patchy-resource/README.html">4.2. The Availability of Patchy Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/spatial-dynamics/larval-trans/README.html">4.3. Larval Transport in Estuaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/spatial-dynamics/currents-tides/README.html">4.4. Placeholder</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experimental Methods</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/expt-methods/README.html">5. Experimental Methods</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/expt-methods/image-video-analysis/README.html">5.1. Image and Video Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/expt-methods/part-track/README.html">5.2. Particle Tracking and PTV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/expt-methods/part-vel/README.html">5.3. Particle Image Velocimetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/expt-methods/AI-classification/README.html">5.4. AI Image Classification</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/organismal-systems/quant-larval-bio" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/organismal-systems/quant-larval-bio/issues/new?title=Issue%20on%20page%20%2Fsubmodules/pyVRS/ChimeraSwim2a.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/submodules/pyVRS/ChimeraSwim2a.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Swimming of early larval stages in still water and shear</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-this-notebook">How to use this notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-jupyter-notebook-cells">Executing Jupyter notebook cells</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-graphics-output">Using graphics output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-larval-shape">Selecting a larval shape</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-larval-shape-a-id-section-loadshape-a">Loading a larval shape <a id="section_loadshape"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-simulation-parameters">Define the simulation parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-run-a-simulation-a-id-section-runshape-a">To run a simulation <a id="section_runshape"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-change-larval-shape-a-id-section-defshape-a">To change larval shape: <a id="section_defshape"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-outer-larval-shape">Define the outer larval shape</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-an-inclusion">Define an inclusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-larval-shape">Compute the larval shape</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-fluid-forces">Compute the fluid forces</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-larval-shape-a-id-section-saveshape-a">Saving a larval shape <a id="section_saveshape"></a></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="swimming-of-early-larval-stages-in-still-water-and-shear">
+<h1>Swimming of early larval stages in still water and shear<a class="headerlink" href="#swimming-of-early-larval-stages-in-still-water-and-shear" title="Permalink to this heading">#</a></h1>
+<p>This is a graphical interface for using the pyVRS (Python Volume-Rendered Swimmer) model of low-Reynolds number hydrodynamics. It has a simplified interface for entering parameters to investigate stability and movement of early-stage larval morphologies (e.g., eggs, blastulae and gastrulae) approximated by “chimeras” of semi-spheroids. These early larval shapes are constructed by joining two half-spheroids about a common central radius.</p>
+<p>By choosing different spheroid shapes (larger vs. smaller central radii; longer vs. shorter semi-spheroids, etc.) you can construct different surface shapes that resemble the outside surfaces of early stages in larval development. You can assign the main volume inside this surface to have a density that reflects the larval tissue within this surface.</p>
+<p>You can also add inclusions, constructed from two half-spheroids, to reflect the inner structure of early stage larvae. You can assign different densities to model the effects of internal volumes of these inclusions, to reflect whether they are filled with seawater, calcium carbonate, lipid, or other materials.</p>
+<p>The resulting shapes do not represent any particular species and stage exactly, but they approximate early stages including eggs, gastrulae and blastulae from a wide diversity of species, and an even wider diversity of hypothetical larval morphologies that do not appear in nature. This makes these shapes good tools for exploring the consequences of size, morphological and physiological features, and properties of the fluid environment such as shear.</p>
+<section id="how-to-use-this-notebook">
+<h2>How to use this notebook<a class="headerlink" href="#how-to-use-this-notebook" title="Permalink to this heading">#</a></h2>
+<p>This notebook is set up with “cells” that contain either Python code or explanatory text. You can see the cells by the bars and numbers on the left side of the notebook window.</p>
+<section id="executing-jupyter-notebook-cells">
+<h3>Executing Jupyter notebook cells<a class="headerlink" href="#executing-jupyter-notebook-cells" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>To start the model, pull down the <code class="docutils literal notranslate"><span class="pre">Run</span></code> menu and select <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Cells</span></code></strong></p></li>
+<li><p><strong>To execute a code cell, select it and hold down the shift key while typing the <code class="docutils literal notranslate"><span class="pre">enter</span></code> key.</strong></p></li>
+<li><p><strong>To reset the model to its initial state, pull down the <code class="docutils literal notranslate"><span class="pre">Run</span></code> menu and select <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">Kernel</span> <span class="pre">and</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Cells</span></code></strong></p></li>
+</ul>
+</section>
+<section id="using-graphics-output">
+<h3>Using graphics output<a class="headerlink" href="#using-graphics-output" title="Permalink to this heading">#</a></h3>
+<p>When the model starts, it creates a larval shape using default parameters. That shape is shown in a separate, resizable graphics window. You can:</p>
+<ul class="simple">
+<li><p><strong>Click and drag on graphics windows to control the viewing angle.</strong></p></li>
+<li><p><strong>Click on the floppy disk icon to save graphics windows as images. Use informative names like <code class="docutils literal notranslate"><span class="pre">default_shape.svg</span></code> so that you can tell one image from another later on.</strong></p></li>
+</ul>
+</section>
+<section id="selecting-a-larval-shape">
+<h3>Selecting a larval shape<a class="headerlink" href="#selecting-a-larval-shape" title="Permalink to this heading">#</a></h3>
+<p>There are two ways to select a larval shape:</p>
+<ul class="simple">
+<li><p><span class="xref myst">Load a file containing the shape and pre-computed hydrodynamic properties</span></p></li>
+<li><p><span class="xref myst">Use input boxes to modify a shape or define a new one, and then calculate its hydrodynamic properties</span></p></li>
+</ul>
+<p>A good way to start is by loading an existing shape (or use the default shape that is automatically loaded below), and running a few simulations with it.</p>
+<ul class="simple">
+<li><p><span class="xref myst">Run simulations using the current shape</span></p></li>
+</ul>
+<p>When you are familiar with the simulation interface, and have explored the effects of flow on this shape, you can try alternative shapes to see how morphology affects swimming.
+You can then save that shape to simulate it in a future session without having to recompute it.</p>
+<ul class="simple">
+<li><p><span class="xref myst">Save a file containing the current shape for use in a future session</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up graphics environment</span>
+<span class="c1">#%matplotlib inline</span>
+<span class="c1">#%matplotlib notebook</span>
+<span class="c1">#import IPython</span>
+<span class="o">%</span><span class="k">matplotlib</span> widget
+<span class="c1">#%matplotlib ipympl</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">ioff</span><span class="p">()</span>
+<span class="c1">#pyplot.ion()</span>
+<span class="kn">from</span> <span class="nn">mpl_interactions</span> <span class="kn">import</span> <span class="n">ipyplot</span> <span class="k">as</span> <span class="n">iplt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits</span> <span class="kn">import</span> <span class="n">mplot3d</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LightSource</span>
+<span class="c1"># Import modules</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="c1"># set up path to submodules</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="c1">#sys.path.append(&#39;../../../submodules/&#39;)</span>
+<span class="c1">#sys.path.append(&#39;../../../submodules/pyVRS&#39;)</span>
+<span class="kn">import</span> <span class="nn">pyVRSmorph</span> <span class="k">as</span> <span class="nn">mrph</span>
+<span class="kn">import</span> <span class="nn">pyVRSflow</span> <span class="k">as</span> <span class="nn">flw</span>
+<span class="kn">from</span> <span class="nn">meshSpheroid</span> <span class="kn">import</span> <span class="n">chimeraSpheroid</span>
+<span class="c1"># Import widget infrastructure</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span> <span class="k">as</span> <span class="n">idisplay</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">from</span> <span class="nn">ipyfilechooser</span> <span class="kn">import</span> <span class="n">FileChooser</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">29</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span> <span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span> <span class="k">as</span> <span class="n">idisplay</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="kn">import</span> <span class="nn">pickle</span>
+<span class="ne">---&gt; </span><span class="mi">29</span> <span class="kn">from</span> <span class="nn">ipyfilechooser</span> <span class="kn">import</span> <span class="n">FileChooser</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;ipyfilechooser&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a class and global instances for morphology parameters</span>
+<span class="k">global</span> <span class="n">surf_pars</span><span class="p">,</span> <span class="n">incl1_pars</span><span class="p">,</span> <span class="n">incl2_pars</span>
+<span class="k">class</span> <span class="nc">CEpars</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A simple class to facilitate acquiring and passing chimera ellipsoid</span>
+<span class="sd">    parameters with interactive_output widgets.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">D</span><span class="o">=</span><span class="mf">50.e-6</span><span class="p">,</span><span class="n">L1</span><span class="o">=</span><span class="mf">100.e-6</span><span class="p">,</span><span class="n">L2</span><span class="o">=-</span><span class="mf">40.e-6</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="mf">6e-6</span><span class="p">,</span><span class="n">nlevel0</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span><span class="n">nlevel1</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+                      <span class="n">translate0</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">translate1</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">translate2</span><span class="o">=</span><span class="mf">0.</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">D</span> <span class="o">=</span> <span class="n">D</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L1</span> <span class="o">=</span> <span class="n">L1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">L2</span> <span class="o">=</span> <span class="n">L2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Ls</span> <span class="o">=</span> <span class="p">[</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d</span> <span class="o">=</span> <span class="n">d</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">=</span> <span class="p">[</span><span class="n">nlevel0</span><span class="p">,</span><span class="n">nlevel1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">translate</span> <span class="o">=</span> <span class="p">[</span><span class="n">translate0</span><span class="p">,</span><span class="n">translate1</span><span class="p">,</span><span class="n">translate2</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">set_surf_pars</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">nlevel0</span><span class="p">,</span><span class="n">nlevel1</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">surf_pars</span>
+    <span class="n">surf_pars</span><span class="o">=</span><span class="n">CEpars</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="n">D</span><span class="p">,</span><span class="n">L1</span><span class="o">=</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="o">=</span><span class="n">L2</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="n">d</span><span class="p">,</span><span class="n">nlevel0</span><span class="o">=</span><span class="n">nlevel0</span><span class="p">,</span><span class="n">nlevel1</span><span class="o">=</span><span class="n">nlevel1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">set_incl1_pars</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">nlevel0</span><span class="p">,</span><span class="n">nlevel1</span><span class="p">,</span><span class="n">translate0</span><span class="p">,</span><span class="n">translate1</span><span class="p">,</span><span class="n">translate2</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">incl1_pars</span>
+    <span class="n">incl1_pars</span><span class="o">=</span><span class="n">CEpars</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="n">D</span><span class="p">,</span><span class="n">L1</span><span class="o">=</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="o">=</span><span class="n">L2</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="n">d</span><span class="p">,</span><span class="n">nlevel0</span><span class="o">=</span><span class="n">nlevel0</span><span class="p">,</span><span class="n">nlevel1</span><span class="o">=</span><span class="n">nlevel1</span><span class="p">,</span>
+                      <span class="n">translate0</span><span class="o">=</span><span class="n">translate0</span><span class="p">,</span><span class="n">translate1</span><span class="o">=</span><span class="n">translate1</span><span class="p">,</span><span class="n">translate2</span><span class="o">=</span><span class="n">translate2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">set_incl2_pars</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">nlevel0</span><span class="p">,</span><span class="n">nlevel1</span><span class="p">,</span><span class="n">translate0</span><span class="p">,</span><span class="n">translate1</span><span class="p">,</span><span class="n">translate2</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">incl2_pars</span>
+    <span class="n">incl2_pars</span><span class="o">=</span><span class="n">CEpars</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="n">D</span><span class="p">,</span><span class="n">L1</span><span class="o">=</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="o">=</span><span class="n">L2</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="n">d</span><span class="p">,</span><span class="n">nlevel0</span><span class="o">=</span><span class="n">nlevel0</span><span class="p">,</span><span class="n">nlevel1</span><span class="o">=</span><span class="n">nlevel1</span><span class="p">,</span>
+                      <span class="n">translate0</span><span class="o">=</span><span class="n">translate0</span><span class="p">,</span><span class="n">translate1</span><span class="o">=</span><span class="n">translate1</span><span class="p">,</span><span class="n">translate2</span><span class="o">=</span><span class="n">translate2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a class and global instances for simulation parameters</span>
+<span class="k">global</span> <span class="n">sim_pars</span>
+<span class="k">class</span> <span class="nc">SimPars</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A simple class to facilitate acquiring and passing VRS simulation</span>
+<span class="sd">    parameters with interactive_output widgets.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">dudz</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">dvdz</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">dwdx</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">U0</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">U1</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">U2</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span>
+                 <span class="n">Tmax</span><span class="o">=</span><span class="mf">20.</span><span class="p">,</span><span class="n">cil_speed</span><span class="o">=</span><span class="mf">0.5</span><span class="o">*</span><span class="mi">1000</span><span class="o">*</span><span class="mf">1e-6</span><span class="p">,</span>
+                 <span class="n">phi</span><span class="o">=</span><span class="n">pi</span><span class="o">/</span><span class="mf">3.</span><span class="p">,</span><span class="n">theta</span><span class="o">=-</span><span class="n">pi</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span><span class="n">psi</span><span class="o">=</span><span class="n">pi</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dudz</span> <span class="o">=</span> <span class="n">dudz</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dvdz</span> <span class="o">=</span> <span class="n">dvdz</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dwdx</span> <span class="o">=</span> <span class="n">dwdx</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">U0</span> <span class="o">=</span> <span class="n">U0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">U1</span> <span class="o">=</span> <span class="n">U1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">U2</span> <span class="o">=</span> <span class="n">U2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Tmax</span> <span class="o">=</span> <span class="n">Tmax</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cil_speed</span> <span class="o">=</span> <span class="n">cil_speed</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">S_fixed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="n">dudz</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="n">dvdz</span><span class="p">,</span><span class="n">dwdx</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">U_const_fixed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">U0</span><span class="p">,</span><span class="n">U1</span><span class="p">,</span><span class="n">U2</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">XEinit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="n">phi</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">psi</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">set_sim_pars</span><span class="p">(</span><span class="n">dudz</span><span class="p">,</span><span class="n">dvdz</span><span class="p">,</span><span class="n">dwdx</span><span class="p">,</span><span class="n">Tmax</span><span class="p">,</span><span class="n">cil_speed</span><span class="p">,</span><span class="n">phi</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">psi</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">sim_pars</span>
+    <span class="n">sim_pars</span><span class="o">=</span><span class="n">SimPars</span><span class="p">(</span><span class="n">dudz</span><span class="o">=</span><span class="n">dudz</span><span class="p">,</span><span class="n">dvdz</span><span class="o">=</span><span class="n">dvdz</span><span class="p">,</span><span class="n">dwdx</span><span class="o">=</span><span class="n">dwdx</span><span class="p">,</span>
+                 <span class="n">Tmax</span><span class="o">=</span><span class="n">Tmax</span><span class="p">,</span><span class="n">cil_speed</span><span class="o">=</span><span class="n">cil_speed</span><span class="p">,</span>
+                 <span class="n">phi</span><span class="o">=</span><span class="n">phi</span><span class="p">,</span><span class="n">theta</span><span class="o">=</span><span class="n">theta</span><span class="p">,</span><span class="n">psi</span><span class="o">=</span><span class="n">psi</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Simulation parameters class defined...&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr style="border:10px solid red"></section>
+</section>
+<section id="loading-a-larval-shape-a-id-section-loadshape-a">
+<h2>Loading a larval shape <a id='section_loadshape'></a><a class="headerlink" href="#loading-a-larval-shape-a-id-section-loadshape-a" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create and display a FileChooser widget</span>
+<span class="n">fc_l</span> <span class="o">=</span> <span class="n">FileChooser</span><span class="p">()</span>
+<span class="n">fc_l</span><span class="o">.</span><span class="n">filter_pattern</span> <span class="o">=</span> <span class="s1">&#39;*.pickle&#39;</span>
+<span class="n">fc_l</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;&lt;b&gt;Choose a filename for this larval morphology:&lt;/b&gt;&#39;</span>
+<span class="n">fc_l</span><span class="o">.</span><span class="n">default_filename</span> <span class="o">=</span> <span class="s1">&#39;new_morph.pickle&#39;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">fc_l</span><span class="p">)</span>
+<span class="c1">#print(fc_l.selected_path)</span>
+<span class="c1">#print(fc_l.selected_filename)</span>
+<span class="c1">#print(fc_l.selected)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the default morphology file, to get a viable scenario for &quot;Run all cells&quot; setup</span>
+<span class="c1">#M = mrph.Morphology()</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fc_l</span><span class="o">.</span><span class="n">default_filename</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Loading morphology as </span><span class="si">{</span><span class="n">fc_l</span><span class="o">.</span><span class="n">default_filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">M</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Loaded morphology file </span><span class="si">{</span><span class="n">fc_l</span><span class="o">.</span><span class="n">default_filename</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">button4</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Load file&quot;</span><span class="p">)</span>
+<span class="n">output4</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+
+<span class="n">buttonsL</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">button4</span><span class="p">,</span> <span class="n">output4</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">buttonsL</span><span class="p">)</span>
+
+<span class="nd">@output4</span><span class="o">.</span><span class="n">capture</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">on_button_clicked4</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fc_l</span><span class="o">.</span><span class="n">selected</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Loading morphology as </span><span class="si">{</span><span class="n">fc_l</span><span class="o">.</span><span class="n">selected</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Loaded morphology file </span><span class="si">{</span><span class="n">fc_l</span><span class="o">.</span><span class="n">selected</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">button4</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_button_clicked4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr style="border:10px solid red"></section>
+<section id="define-the-simulation-parameters">
+<h2>Define the simulation parameters<a class="headerlink" href="#define-the-simulation-parameters" title="Permalink to this heading">#</a></h2>
+<p>This cell sets parameters for simulating how the larval shape swims under different flow conditions.</p>
+<p>The parameters are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{dU}{dz}\)</span>: change of horizontal velocity (<span class="math notranslate nohighlight">\(U\)</span>) across depth (<span class="math notranslate nohighlight">\(z\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{dV}{dz}\)</span>: change of horizontal velocity (<span class="math notranslate nohighlight">\(V\)</span>) across depth (<span class="math notranslate nohighlight">\(z\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{dW}{dx}\)</span>: change of vertical velocity (<span class="math notranslate nohighlight">\(W\)</span>) in the <span class="math notranslate nohighlight">\(x\)</span> direction</p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi\)</span>, <span class="math notranslate nohighlight">\(\theta\)</span>, <span class="math notranslate nohighlight">\(\psi\)</span>: initial Euler angle</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{max}\)</span>: duration of time to simulate</p></li>
+<li><p><span class="math notranslate nohighlight">\(V_{cilia}\)</span>: velocity of cilia on the larval surface (red: maximum speed; blue: 0 speed)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set simulation parameters</span>
+<span class="n">spars_dudz</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\frac</span><span class="si">{dU}{dz}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">spars_dvdz</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\frac</span><span class="si">{dV}{dz}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">spars_dwdx</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\frac</span><span class="si">{dW}{dx}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">spars_Tmax</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$T_</span><span class="si">{max}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">spars_cil_speed</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">500.e-6</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$V_</span><span class="si">{cilia}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">spars_phi</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">pi</span><span class="o">/</span><span class="mf">3.</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\phi$&quot;</span><span class="p">)</span>
+<span class="n">spars_theta</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">pi</span><span class="o">/</span><span class="mf">4.</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\theta$&quot;</span><span class="p">)</span>
+<span class="n">spars_psi</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">pi</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\psi$&quot;</span><span class="p">)</span>
+
+<span class="c1">#translate=[0.,0.,40.e-6]</span>
+
+<span class="n">ui0s</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">spars_dudz</span><span class="p">,</span><span class="n">spars_phi</span><span class="p">,</span><span class="n">spars_Tmax</span><span class="p">])</span>
+<span class="n">ui1s</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">spars_dvdz</span><span class="p">,</span><span class="n">spars_theta</span><span class="p">,</span><span class="n">spars_cil_speed</span><span class="p">])</span>
+<span class="n">ui2s</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">spars_dwdx</span><span class="p">,</span><span class="n">spars_psi</span><span class="p">])</span>
+<span class="n">ui012s</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">ui0s</span><span class="p">,</span><span class="n">ui1s</span><span class="p">,</span><span class="n">ui2s</span><span class="p">])</span>
+
+
+<span class="n">outs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">interactive_output</span><span class="p">(</span><span class="n">set_sim_pars</span><span class="p">,{</span><span class="s1">&#39;dudz&#39;</span><span class="p">:</span><span class="n">spars_dudz</span><span class="p">,</span><span class="s1">&#39;dvdz&#39;</span><span class="p">:</span><span class="n">spars_dvdz</span><span class="p">,</span><span class="s1">&#39;dwdx&#39;</span><span class="p">:</span><span class="n">spars_dwdx</span><span class="p">,</span><span class="s1">&#39;Tmax&#39;</span><span class="p">:</span><span class="n">spars_Tmax</span><span class="p">,</span>
+                                                <span class="s1">&#39;cil_speed&#39;</span><span class="p">:</span><span class="n">spars_cil_speed</span><span class="p">,</span><span class="s1">&#39;phi&#39;</span><span class="p">:</span><span class="n">spars_phi</span><span class="p">,</span>
+                                                <span class="s1">&#39;theta&#39;</span><span class="p">:</span><span class="n">spars_theta</span><span class="p">,</span>
+                                                <span class="s1">&#39;psi&#39;</span><span class="p">:</span><span class="n">spars_psi</span><span class="p">})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">ui012s</span><span class="p">,</span><span class="n">outs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="to-run-a-simulation-a-id-section-runshape-a">
+<h2>To run a simulation <a id='section_runshape'></a><a class="headerlink" href="#to-run-a-simulation-a-id-section-runshape-a" title="Permalink to this heading">#</a></h2>
+<p>Hit the <strong>reset</strong> button to create a new simulation window.</p>
+<p>Hit <strong>run</strong> to simulate swimming of the larval shape you defined using the flow parameters you defined.</p>
+<p>In this window, the left hand side plot shows the trajectory of the larva (blue lines), starting at the position (0,0,0) which is marked with a red dot. The simulated time, and the larval position and velocity are given at the top of the plot.</p>
+<p>The right hand side plot shows the orientation of the larval shape. The Euler angles specifying the larva’s orientation are given at the top of the plot.</p>
+<p>The simulation will plot multiple trajectories in the same plot, to make it easy to compare the effects of different shear rates. You can save the plot using the disk icon at the top of the simulation window.</p>
+<ul class="simple">
+<li><p><strong>To run another simulation using the same simulation window, change e.g. the shear or ciliary velocity and click the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button again. Make sure to press the <code class="docutils literal notranslate"><span class="pre">enter</span></code> key after you change parameters.</strong></p></li>
+<li><p><strong>To run another simulation using a new simulation window, click the <code class="docutils literal notranslate"><span class="pre">Reset</span></code> button and then the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button.</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">global</span> <span class="n">Sim</span>
+<span class="n">button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Reset&quot;</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+<span class="n">button2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Run&quot;</span><span class="p">)</span>
+<span class="n">output2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+
+<span class="n">buttons</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">button</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">button2</span><span class="p">,</span> <span class="n">output2</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">buttons</span><span class="p">)</span>
+
+<span class="c1">#pyplot.ion()</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">ioff</span><span class="p">()</span>
+
+<span class="nd">@output</span><span class="o">.</span><span class="n">capture</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">on_button_clicked</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">Sim</span><span class="p">,</span> <span class="n">sim_pars</span>
+    <span class="k">with</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">ioff</span><span class="p">():</span>
+        <span class="n">figS</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mi">58</span><span class="p">)</span>
+    <span class="n">Sim</span> <span class="o">=</span> <span class="n">flw</span><span class="o">.</span><span class="n">VRSsim</span><span class="p">(</span><span class="n">morph</span><span class="o">=</span><span class="n">M</span><span class="p">,</span><span class="n">fignum</span><span class="o">=</span><span class="mi">58</span><span class="p">)</span>
+    <span class="c1">#Sim = flw.VRSsim(morph=M,fig=figS,fignum=58)</span>
+    <span class="c1">#Sim = flw.VRSsim(morph=M,fig=figS)</span>
+
+<span class="nd">@output2</span><span class="o">.</span><span class="n">capture</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">on_button_clicked2</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">Sim</span><span class="p">,</span><span class="n">sim_pars</span>
+    <span class="n">Sim</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">XEinit</span><span class="o">=</span><span class="n">sim_pars</span><span class="o">.</span><span class="n">XEinit</span><span class="p">,</span><span class="n">Tmax</span><span class="o">=</span><span class="n">sim_pars</span><span class="o">.</span><span class="n">Tmax</span><span class="p">,</span><span class="n">cil_speed</span><span class="o">=</span><span class="n">sim_pars</span><span class="o">.</span><span class="n">cil_speed</span><span class="p">,</span><span class="n">U_const_fixed</span><span class="o">=</span><span class="n">sim_pars</span><span class="o">.</span><span class="n">U_const_fixed</span><span class="p">,</span><span class="n">S_fixed</span><span class="o">=</span><span class="n">sim_pars</span><span class="o">.</span><span class="n">S_fixed</span><span class="p">)</span>
+
+<span class="c1">#pyplot.ioff()</span>
+<span class="n">button</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_button_clicked</span><span class="p">)</span>
+<span class="c1">#pyplot.ion()</span>
+<span class="n">button2</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_button_clicked2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr style="border:10px solid red"></section>
+<section id="to-change-larval-shape-a-id-section-defshape-a">
+<h2>To change larval shape: <a id='section_defshape'></a><a class="headerlink" href="#to-change-larval-shape-a-id-section-defshape-a" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Scroll to the shape parameter input boxes (there are separate parameter sets for the larval surface and inclusions).</strong></p></li>
+<li><p><strong>Change one or more shape parameters, and re-execute the code cell below to calculate and visualize the shape.</strong></p></li>
+<li><p><strong>When you are satisfied with the shape, re-execute the next code cells to recalculate flow around the new shapes.</strong></p></li>
+<li><p><strong>Run the simulation as before, with <code class="docutils literal notranslate"><span class="pre">Reset</span></code> to create a new simulation window and <code class="docutils literal notranslate"><span class="pre">Run</span></code> to visualize swimming trajectories.</strong></p></li>
+</ul>
+<section id="define-the-outer-larval-shape">
+<h3>Define the outer larval shape<a class="headerlink" href="#define-the-outer-larval-shape" title="Permalink to this heading">#</a></h3>
+<p><img alt="alt text" src="../../_images/ChimeraSpheroid_geometry2.png" /></p>
+<p>The text boxes below enable you to set the shape parameters for the outside of a model larva. To change parameters, enter a new value and hit <code class="docutils literal notranslate"><span class="pre">enter</span></code>. The parameters are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(D\)</span>: central diameter</p></li>
+<li><p><span class="math notranslate nohighlight">\(L_1\)</span>: length of the top semi-ellipse (distance from the upper tip to the equator)</p></li>
+<li><p><span class="math notranslate nohighlight">\(L_2\)</span>: length of the bottom semi-ellipse (distance from the lower tip to the equator)</p></li>
+</ul>
+<p>Additional parameters (that you may not have to adjust) specify the layout of triangles on the larval surface.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(d\)</span>, a parameter specifying the number of columns of triangles on the top and bottom parts of the larval surface</p></li>
+<li><p><span class="math notranslate nohighlight">\(n_0\)</span> and <span class="math notranslate nohighlight">\(n_1\)</span> specify the number of rows of triangles on the top and bottom parts of the larval surface</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set parameters for surface chimera</span>
+<span class="n">surf_D</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">50.e-6</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$D$&quot;</span><span class="p">)</span>
+<span class="n">surf_d</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">6.e-6</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$d$&quot;</span><span class="p">)</span>
+<span class="n">surf_L1</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">100.e-6</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$L_1$&quot;</span><span class="p">)</span>
+<span class="n">surf_nlevel0</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$n_0$&quot;</span><span class="p">)</span>
+<span class="n">surf_L2</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=-</span><span class="mf">40.e-6</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$L_2$&quot;</span><span class="p">)</span>
+<span class="n">surf_nlevel1</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$n_1$&quot;</span><span class="p">)</span>
+
+<span class="n">ui0</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">surf_D</span><span class="p">,</span><span class="n">surf_d</span><span class="p">])</span>
+<span class="n">ui1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">surf_L1</span><span class="p">,</span><span class="n">surf_nlevel0</span><span class="p">])</span>
+<span class="n">ui2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">surf_L2</span><span class="p">,</span><span class="n">surf_nlevel1</span><span class="p">])</span>
+<span class="n">ui012</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">ui0</span><span class="p">,</span><span class="n">ui1</span><span class="p">,</span><span class="n">ui2</span><span class="p">])</span>
+
+<span class="n">out</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">interactive_output</span><span class="p">(</span><span class="n">set_surf_pars</span><span class="p">,{</span><span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="n">surf_D</span><span class="p">,</span><span class="s1">&#39;L1&#39;</span><span class="p">:</span><span class="n">surf_L1</span><span class="p">,</span><span class="s1">&#39;L2&#39;</span><span class="p">:</span><span class="n">surf_L2</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">:</span><span class="n">surf_d</span><span class="p">,</span>
+                                                <span class="s1">&#39;nlevel0&#39;</span><span class="p">:</span><span class="n">surf_nlevel0</span><span class="p">,</span><span class="s1">&#39;nlevel1&#39;</span><span class="p">:</span><span class="n">surf_nlevel1</span><span class="p">})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">ui012</span><span class="p">,</span><span class="n">out</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="define-an-inclusion">
+<h3>Define an inclusion<a class="headerlink" href="#define-an-inclusion" title="Permalink to this heading">#</a></h3>
+<p>The text boxes below enable you to set the shape parameters for inclusions inside a model larva. The parameters have the same interpretations as for the outer shape:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a\)</span>: central radius</p></li>
+<li><p><span class="math notranslate nohighlight">\(b_0\)</span>: length of the top semi-ellipse</p></li>
+<li><p><span class="math notranslate nohighlight">\(b_1\)</span>: length of the bottom semi-ellipse (a negative number, because this semi-ellipse points downwards)</p></li>
+</ul>
+<p>Additional parameters (that you may not have to adjust) specify the layout of triangles on the inclusion.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(d\)</span>, a parameter specifying the number of columns of triangles on the top and bottom parts of the inclusion</p></li>
+<li><p><span class="math notranslate nohighlight">\(n_0\)</span> and <span class="math notranslate nohighlight">\(n_1\)</span> specify the number of rows of triangles on the top and bottom parts of the inclusion</p></li>
+</ul>
+<p>Make sure the surfaces do not intersect (that is, the inclusion is entirely within the outer surface, etc.)!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set parameters for the inclusion chimera</span>
+<span class="n">incl1_D</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">30.e-6</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$D$&quot;</span><span class="p">)</span>
+<span class="n">incl1_d</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">5.e-6</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$d$&quot;</span><span class="p">)</span>
+<span class="n">incl1_L1</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">50.e-6</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$L_2$&quot;</span><span class="p">)</span>
+<span class="n">incl1_nlevel0</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$n_0$&quot;</span><span class="p">)</span>
+<span class="n">incl1_L2</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=-</span><span class="mf">20.e-6</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$L_2$&quot;</span><span class="p">)</span>
+<span class="n">incl1_nlevel1</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$n_1$&quot;</span><span class="p">)</span>
+<span class="n">incl1_translate0</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$x$ offset&quot;</span><span class="p">)</span>
+<span class="n">incl1_translate1</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$y$ offset&quot;</span><span class="p">)</span>
+<span class="n">incl1_translate2</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">40.e-6</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$z$ offset&quot;</span><span class="p">)</span>
+
+<span class="c1">#translate=[0.,0.,40.e-6]</span>
+
+<span class="n">ui0i</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">incl1_D</span><span class="p">,</span><span class="n">incl1_d</span><span class="p">,</span><span class="n">incl1_translate0</span><span class="p">])</span>
+<span class="n">ui1i</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">incl1_L1</span><span class="p">,</span><span class="n">incl1_nlevel0</span><span class="p">,</span><span class="n">incl1_translate1</span><span class="p">])</span>
+<span class="n">ui2i</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">incl1_L2</span><span class="p">,</span><span class="n">incl1_nlevel1</span><span class="p">,</span><span class="n">incl1_translate2</span><span class="p">])</span>
+<span class="n">ui012i</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">ui0i</span><span class="p">,</span><span class="n">ui1i</span><span class="p">,</span><span class="n">ui2i</span><span class="p">])</span>
+
+
+<span class="n">outi</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">interactive_output</span><span class="p">(</span><span class="n">set_incl1_pars</span><span class="p">,{</span><span class="s1">&#39;D&#39;</span><span class="p">:</span><span class="n">incl1_D</span><span class="p">,</span><span class="s1">&#39;L1&#39;</span><span class="p">:</span><span class="n">incl1_L1</span><span class="p">,</span><span class="s1">&#39;L2&#39;</span><span class="p">:</span><span class="n">incl1_L2</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">:</span><span class="n">incl1_d</span><span class="p">,</span>
+                                                <span class="s1">&#39;nlevel0&#39;</span><span class="p">:</span><span class="n">incl1_nlevel0</span><span class="p">,</span><span class="s1">&#39;nlevel1&#39;</span><span class="p">:</span><span class="n">incl1_nlevel1</span><span class="p">,</span>
+                                                <span class="s1">&#39;translate0&#39;</span><span class="p">:</span><span class="n">incl1_translate0</span><span class="p">,</span>
+                                                <span class="s1">&#39;translate1&#39;</span><span class="p">:</span><span class="n">incl1_translate1</span><span class="p">,</span>
+                                                <span class="s1">&#39;translate2&#39;</span><span class="p">:</span><span class="n">incl1_translate2</span><span class="p">})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">ui012i</span><span class="p">,</span><span class="n">outi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-the-larval-shape">
+<h3>Compute the larval shape<a class="headerlink" href="#compute-the-larval-shape" title="Permalink to this heading">#</a></h3>
+<p>Execute this code cell to plot out the shape of the larva specified by the parameters you entered in the input boxes above. If you’re happy with the goemetry, proceed to the next step. If not, change the parameters and re-execute this cell again to display the new shape.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CEsurf</span> <span class="o">=</span> <span class="n">chimeraSpheroid</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="n">surf_pars</span><span class="o">.</span><span class="n">D</span><span class="p">,</span><span class="n">L1</span><span class="o">=</span><span class="n">surf_pars</span><span class="o">.</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="o">=</span><span class="n">surf_pars</span><span class="o">.</span><span class="n">L2</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="n">surf_pars</span><span class="o">.</span><span class="n">d</span><span class="p">,</span><span class="n">nlevels</span><span class="o">=</span><span class="n">surf_pars</span><span class="o">.</span><span class="n">nlevels</span><span class="p">)</span>
+<span class="n">CEincl</span> <span class="o">=</span> <span class="n">chimeraSpheroid</span><span class="p">(</span><span class="n">D</span><span class="o">=</span><span class="n">incl1_pars</span><span class="o">.</span><span class="n">D</span><span class="p">,</span><span class="n">L1</span><span class="o">=</span><span class="n">incl1_pars</span><span class="o">.</span><span class="n">L1</span><span class="p">,</span><span class="n">L2</span><span class="o">=</span><span class="n">incl1_pars</span><span class="o">.</span><span class="n">L2</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="n">incl1_pars</span><span class="o">.</span><span class="n">d</span><span class="p">,</span><span class="n">nlevels</span><span class="o">=</span><span class="n">incl1_pars</span><span class="o">.</span><span class="n">nlevels</span><span class="p">,</span><span class="n">translate</span><span class="o">=</span><span class="n">incl1_pars</span><span class="o">.</span><span class="n">translate</span><span class="p">)</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">mrph</span><span class="o">.</span><span class="n">Morphology</span><span class="p">()</span>
+<span class="n">M</span><span class="o">.</span><span class="n">check_normals</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">M</span><span class="o">.</span><span class="n">gen_surface</span><span class="p">(</span><span class="n">vectors</span><span class="o">=</span><span class="n">CEsurf</span><span class="o">.</span><span class="n">vectors</span><span class="p">)</span>
+<span class="c1"># materials parameter can be &#39;seawater&#39;, &#39;tissue&#39;, &#39;lipid&#39; or &#39;calcite&#39; </span>
+<span class="n">M</span><span class="o">.</span><span class="n">gen_inclusion</span><span class="p">(</span><span class="n">vectors</span><span class="o">=</span><span class="n">CEincl</span><span class="o">.</span><span class="n">vectors</span><span class="p">,</span><span class="n">material</span><span class="o">=</span><span class="s1">&#39;freshwater&#39;</span><span class="p">,</span><span class="n">immersed_in</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#with pyplot.ioff():</span>
+<span class="c1">#    figureM = pyplot.figure(num=57)</span>
+<span class="c1">#pyplot.ion()</span>
+<span class="n">figureM</span> <span class="o">=</span> <span class="n">pyplot</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mi">57</span><span class="p">)</span>
+<span class="n">axesM</span> <span class="o">=</span> <span class="n">figureM</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">M</span><span class="o">.</span><span class="n">plot_layers</span><span class="p">(</span><span class="n">axes</span><span class="o">=</span><span class="n">axesM</span><span class="p">)</span>
+
+<span class="n">figureM</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">figureM</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">flush_events</span><span class="p">()</span>
+<span class="n">pyplot</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+<span class="c1">#pyplot.ioff()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compute-the-fluid-forces">
+<h3>Compute the fluid forces<a class="headerlink" href="#compute-the-fluid-forces" title="Permalink to this heading">#</a></h3>
+<p>Executing this cell will compute the geometry and fluid flow around the model larva.</p>
+<p>Depending on the number of triangle and the speed of your computer, it may take a few seconds to complete:</p>
+<ul class="simple">
+<li><p>When it starts calculating, it prints out “Calculating inverse…”.</p></li>
+<li><p>When the calculation is complete, it prints out “Done calculating inverse.”</p></li>
+<li><p>The output includes statistics like the magnitudes and centers of buoyancy and gravity.</p></li>
+</ul>
+<p><strong>You need to run this just once for each larval shape. You do not need to rerun it unless you change the larval shape.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">body_calcs</span><span class="p">()</span>
+<span class="n">M</span><span class="o">.</span><span class="n">flow_calcs</span><span class="p">(</span><span class="n">surface_layer</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="saving-a-larval-shape-a-id-section-saveshape-a">
+<h2>Saving a larval shape <a id='section_saveshape'></a><a class="headerlink" href="#saving-a-larval-shape-a-id-section-saveshape-a" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create and display a FileChooser widget</span>
+<span class="n">fc_s</span> <span class="o">=</span> <span class="n">FileChooser</span><span class="p">()</span>
+<span class="n">fc_s</span><span class="o">.</span><span class="n">filter_pattern</span> <span class="o">=</span> <span class="s1">&#39;*.pickle&#39;</span>
+<span class="n">fc_s</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;&lt;b&gt;Choose a filename for this larval morphology:&lt;/b&gt;&#39;</span>
+<span class="n">fc_s</span><span class="o">.</span><span class="n">default_filename</span> <span class="o">=</span> <span class="s1">&#39;new_morph.pickle&#39;</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">fc_s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">button3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Save file&quot;</span><span class="p">)</span>
+<span class="n">output3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+
+<span class="n">buttonsS</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">button3</span><span class="p">,</span> <span class="n">output3</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">buttonsS</span><span class="p">)</span>
+
+<span class="nd">@output3</span><span class="o">.</span><span class="n">capture</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">on_button_clicked3</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fc_s</span><span class="o">.</span><span class="n">selected</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Saving morphology as </span><span class="si">{</span><span class="n">fc_s</span><span class="o">.</span><span class="n">selected</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Saved morphology as </span><span class="si">{</span><span class="n">fc_s</span><span class="o">.</span><span class="n">selected</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">button3</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_button_clicked3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./submodules/pyVRS"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-this-notebook">How to use this notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-jupyter-notebook-cells">Executing Jupyter notebook cells</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-graphics-output">Using graphics output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-larval-shape">Selecting a larval shape</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-larval-shape-a-id-section-loadshape-a">Loading a larval shape <a id="section_loadshape"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-simulation-parameters">Define the simulation parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-run-a-simulation-a-id-section-runshape-a">To run a simulation <a id="section_runshape"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-change-larval-shape-a-id-section-defshape-a">To change larval shape: <a id="section_defshape"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-outer-larval-shape">Define the outer larval shape</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#define-an-inclusion">Define an inclusion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-larval-shape">Compute the larval shape</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-fluid-forces">Compute the fluid forces</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-a-larval-shape-a-id-section-saveshape-a">Saving a larval shape <a id="section_saveshape"></a></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Daniel Grünbaum
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
