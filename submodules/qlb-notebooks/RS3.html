@@ -1,0 +1,787 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>2.3. 🧮 Mass flux in and out of moving particles &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"1fa7f34ae4514c20a39ae17cffc41795": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3cf4fa41dc3f4f6eb7e53114785ccd47": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "2e9f1ee254f5437aa6c242aa3a9299bc": {"model_name": "FloatTextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatTextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatTextView", "continuous_update": false, "description": "$\\mu~~ (\\frac{N s}{m^2})$", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_1fa7f34ae4514c20a39ae17cffc41795", "step": null, "style": "IPY_MODEL_3cf4fa41dc3f4f6eb7e53114785ccd47", "tabbable": null, "tooltip": null, "value": 0.001376}}, "eccdb64f467c49da905364f045db9140": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a44fac717695495c9b784848f6fb7b27": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "038003a1d1b3487b93b702ffc311801c": {"model_name": "FloatTextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatTextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatTextView", "continuous_update": false, "description": "$\\rho~~ (\\frac{kg}{m^3})$", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_eccdb64f467c49da905364f045db9140", "step": null, "style": "IPY_MODEL_a44fac717695495c9b784848f6fb7b27", "tabbable": null, "tooltip": null, "value": 1028.0}}, "25ecd29f23834a719e0b361854dacb7a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d4e373382c4b414bb126cb7a07b82a85": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "ffe121d352bf4176a05676afcb204931": {"model_name": "FloatTextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatTextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatTextView", "continuous_update": false, "description": "$\\rho_{sphere}~~ (\\frac{kg}{m^3})$", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_25ecd29f23834a719e0b361854dacb7a", "step": null, "style": "IPY_MODEL_d4e373382c4b414bb126cb7a07b82a85", "tabbable": null, "tooltip": null, "value": 1105.0}}, "631914d017794597a0f8e55702d8cfb9": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "8d13be0ee625491db804ae26888b5d15": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "e5d77657170b4af8a556edc7ce77dcfd": {"model_name": "FloatTextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatTextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatTextView", "continuous_update": false, "description": "$C_s$", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_631914d017794597a0f8e55702d8cfb9", "step": null, "style": "IPY_MODEL_8d13be0ee625491db804ae26888b5d15", "tabbable": null, "tooltip": null, "value": 0.0}}, "f0787f38a94541b6ab011106b1143e30": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a4b74f344b29402caf8d9ae79e78795b": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "c1442ebc62964140bcac5c0e71627047": {"model_name": "FloatTextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatTextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatTextView", "continuous_update": false, "description": "$C_w$", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_f0787f38a94541b6ab011106b1143e30", "step": null, "style": "IPY_MODEL_a4b74f344b29402caf8d9ae79e78795b", "tabbable": null, "tooltip": null, "value": 1.0}}, "457f8c0076ef411da5838855ba4a905a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a09fa7385b0543d4b829cd34684a354a": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "27da1db1df684612801a2e55f90c476d": {"model_name": "FloatTextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatTextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatTextView", "continuous_update": false, "description": "$D~~ (m)$", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_457f8c0076ef411da5838855ba4a905a", "step": null, "style": "IPY_MODEL_a09fa7385b0543d4b829cd34684a354a", "tabbable": null, "tooltip": null, "value": 5e-06}}, "af0c23c01e084fc7b26d1293870acc5c": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6b552fdedcef477491484c314111b244": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "description_width": ""}}, "4e14db9d77604bae8f2439cc5bf7cd0a": {"model_name": "FloatTextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatTextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "FloatTextView", "continuous_update": false, "description": "$K~~ (\\frac{m^2}{s})$", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_af0c23c01e084fc7b26d1293870acc5c", "step": null, "style": "IPY_MODEL_6b552fdedcef477491484c314111b244", "tabbable": null, "tooltip": null, "value": 0.001}}, "b1114eb79b594b7182ca70dffc2cbc74": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "587565f15e194239bca86f8dc195d494": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_2e9f1ee254f5437aa6c242aa3a9299bc", "IPY_MODEL_038003a1d1b3487b93b702ffc311801c", "IPY_MODEL_c1442ebc62964140bcac5c0e71627047"], "layout": "IPY_MODEL_b1114eb79b594b7182ca70dffc2cbc74", "tabbable": null, "tooltip": null}}, "4638618411a44c8cb2e1e05334665871": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "bd6eee666cf34a4f89c4d3cc33389392": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_ffe121d352bf4176a05676afcb204931", "IPY_MODEL_27da1db1df684612801a2e55f90c476d", "IPY_MODEL_e5d77657170b4af8a556edc7ce77dcfd"], "layout": "IPY_MODEL_4638618411a44c8cb2e1e05334665871", "tabbable": null, "tooltip": null}}, "7cfe550f04e8492d89693fa51904ab57": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b71175b16d0e46e18d6d7e5bf983c71e": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_587565f15e194239bca86f8dc195d494", "IPY_MODEL_bd6eee666cf34a4f89c4d3cc33389392"], "layout": "IPY_MODEL_7cfe550f04e8492d89693fa51904ab57", "tabbable": null, "tooltip": null}}, "7687e612c9e34935a08c2b1d050039ac": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6acd75a0028347e08c4ea41b373e7917": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_7687e612c9e34935a08c2b1d050039ac", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Volume = 6.545e-17\nExcess mass = -5.04e-15\nGravity/buoyancy force = -4.944e-14\nReynolds number: Re = 2.848e-06\nU = -7.624e-07\n\nSherwood number: Sh = 1.0002738698215627\nDiffusive transport: Q_diff = 3.141592653589794e-08\nAdvective transport: Q_adv = 3.142453041009255e-08\n\nAdvective transport per unit mass: Q_adv/Excess mass = 6235473.474212339\n"}], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/qlb-notebooks/RS3';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.4. Molecular Transport Mechanisms" href="../../content/biomechanics/mol-trans-mechs/README.html" />
+    <link rel="prev" title="2.2. 🧮 Particle transport by currents and turbulence" href="RS2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../content/overview.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Approaches to Larval Biology -- Selected topics and executable examples</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../content/overview.html">
+                    Quantitative Approaches to Larval Biology: Selected topics and executable examples
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/overview/README.html">1. Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/overview/how-to-use/README.html">1.2. How to use this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example.html">1.3. 🧮 An example Jupyter notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/overview/scale-models/README.html">1.4. Scale-models and nondimensional numbers in Larval Biology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scale-models.html">1.5. 🧮 Scale models and dynamic similarity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nondim-numbers.html">1.6. 📖 Non-dimensional numbers</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Biomechanics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../content/biomechanics/README.html">2. Biomechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="RS1.html">2.1. 🧮 Movement of spherical particles in fluid: Analyses using the Reynolds number: Part 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RS2.html">2.2. 🧮 Particle transport by currents and turbulence</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. 🧮 Mass flux in and out of moving particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mol-trans-mechs/README.html">2.4. Molecular Transport Mechanisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mech-larval-swim/README.html">2.5. Mechanics of Larval Swimming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyVRS/ChimeraSwim4.html">2.6. Swimming of early larval stages in still water and shear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pyVRS/ChimeraDesign.html">2.7. Design and save early larval morphologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mech-larval-swim/ChimeraSwimActivities.html">2.8. 🛼 Activities: Exploring effects of size and shape in Early Larval Swimming</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Demography</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/demography/README.html">3. Demography</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/demography/larval-cloning/README.html">3.1. Larval Cloning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LarvalCloning/LarvalCloningModel.html">3.2. Demographic implications of cloning in marine invertebrate larvae</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/demography/specialist-generalist/README.html">3.3. Specialist vs. Generalist Life Histories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/demography/stage-age-struct-pop/README.html">3.4. Stage- and Age- Structured Populations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../CroakerASM/Croaker.html">3.5. Understanding life history dynamics in structured populations with a stage-within-age matrix model</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Spatial Dynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/spatial-dynamics/README.html">4. Spatial Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/spatial-dynamics/persist-extinct/README.html">4.1. Effects of Scale on Persistence and Extinction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/spatial-dynamics/patchy-resource/README.html">4.2. The Availability of Patchy Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/spatial-dynamics/larval-trans/README.html">4.3. Larval Transport in Estuaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/spatial-dynamics/currents-tides/README.html">4.4. Placeholder</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Experimental Methods</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/expt-methods/README.html">5. Experimental Methods</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/expt-methods/image-video-analysis/README.html">5.1. Image and Video Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/expt-methods/part-track/README.html">5.2. Particle Tracking and PTV</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/expt-methods/part-vel/README.html">5.3. Particle Image Velocimetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/expt-methods/AI-classification/README.html">5.4. AI Image Classification</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/organismal-systems/quant-larval-bio" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/organismal-systems/quant-larval-bio/issues/new?title=Issue%20on%20page%20%2Fsubmodules/qlb-notebooks/RS3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/submodules/qlb-notebooks/RS3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>🧮 Mass flux in and out of moving particles</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effects-of-flow-on-molecular-transport-mechanisms">2.3.1. Effects of flow on molecular transport mechanisms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sherwood-number-calculator">2.3.2. Sherwood number calculator</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="mass-flux-in-and-out-of-moving-particles">
+<h1><span class="section-number">2.3. </span>🧮 Mass flux in and out of moving particles<a class="headerlink" href="#mass-flux-in-and-out-of-moving-particles" title="Permalink to this heading">#</a></h1>
+<section id="effects-of-flow-on-molecular-transport-mechanisms">
+<h2><span class="section-number">2.3.1. </span>Effects of flow on molecular transport mechanisms<a class="headerlink" href="#effects-of-flow-on-molecular-transport-mechanisms" title="Permalink to this heading">#</a></h2>
+<p>We are all familiar with the phenomenon of “wind chill” – we get colder on a chilly, windy day than on a day that is equally cold but has no wind.
+Similarly, if you pour sugar crystals into your tea and let them sit on the bottom of your cup, they will take some time to dissolve.
+If you stir your tea so that there is flow over the crystals they dissolve almost immediately.
+In general, except at microscopic scales, molecular transport mechanisms are usually enhanced by flow.</p>
+<p>Just as we used a scale model approach to estimate how fast particles move in fluids, we can use this approach to estimate how molecular transport mechanisms like diffusion are enhanced by particle movement.
+The most convenient way to perform this calculation is with another <em>dimensionless ratio</em>.
+Recall that the Reynolds number is dimensionless, because it is the quotient of a force divided by another force – the units of force in the numerator and denominator cancel).
+The new dimensionless ratio is called the Sherwood number, <span class="math notranslate nohighlight">\(\mathcal{Sh}\)</span>, and is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{Sh} = \frac{\mathit{mass~flux~with~diffusion~and~flow}}{\mathit{mass~flux~with~diffusion~alone}}
+\]</div>
+<p>For example, suppose we consider a phytoplankton cell that is absorbing nutrients as it slowly sinks in the water column.
+<span class="math notranslate nohighlight">\(\mathcal{Sh}\)</span> is the actual mass transport of nutrients into the cell, divided by the mass of nutrients that would be transported if the cell were not sinking but were stationary in the water.
+If the cell were stationary, mass transport would occur by diffusion alone.
+If the cell is moving, the wind chill and stirred tea examples suggest that nutrient transport might be much higher.
+If so, then actual transport is higher than transport by diffusion alone, and <span class="math notranslate nohighlight">\(\mathcal{Sh} \gt 1\)</span>.</p>
+<p>Two points are important here:</p>
+<p><strong>First, <span class="math notranslate nohighlight">\(\mathcal{Sh}\)</span> is a function of velocity (in this case, the sinking speed).</strong></p>
+<p>Possible values range from <span class="math notranslate nohighlight">\(\mathcal{Sh} = 1\)</span>, for a particle that is moving very slowly or not at all (that is, no enhancement of transport due to movement) to very large values (e.g. <span class="math notranslate nohighlight">\(\mathcal{Sh} \gt 100\)</span>) for some rapidly moving particles.
+That means mass transport has been increased by a factor of more than 100.
+As you can imagine, this could make quite a difference to nutrient uptake by cells, and in many other analogous situations</p>
+<p>Because Sh depends on velocity, it is effectively summarized as a function of <span class="math notranslate nohighlight">\(\mathcal{Re}\)</span> (just as was the coefficient of drag, <span class="math notranslate nohighlight">\(C_d\)</span>.
+Here, <span class="math notranslate nohighlight">\(\mathcal{Re}\)</span> summarizes how fluid flows around the particle.
+Because diffusion is involved, we also need a way to express the diffusion rate of the nutrient (or other solute, as the case may be).</p>
+<p>The convenient way to express this is as yet another dimensionless ratio, the <strong>Schmidt number</strong>, <span class="math notranslate nohighlight">\(\mathcal{Sc}\)</span>.
+<span class="math notranslate nohighlight">\(\mathcal{Sc}\)</span> has a simple definition:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{Sc} = \frac{\mu}{D \times \rho}
+\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(\mu\)</span> is the fluid viscosity, <span class="math notranslate nohighlight">\(\rho\)</span> is the fluid density, and <span class="math notranslate nohighlight">\(D\)</span> is the diffusion coefficient of the solute in the fluid.</p>
+<p><strong>Second, for many simple shapes, we have a formula for the mass tranport due to diffusion alone.</strong></p>
+<p>For example, for a spherical particle, the mass transport of solute into the particle due to diffusion alone is</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{\mathit{diff}} = 2 \pi D \times d \times (C_w - C_s).
+\]</div>
+<p>In this formula,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(d\)</span> is the particle diameter;</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_w\)</span> is the solute concentration in the fluid far from the particle; and,</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_s\)</span> is the concentration at the surface of the particle.</p></li>
+</ul>
+<p>For example, if the particle is extremely effective at absorbing the solute (as might be approximately true for a phytoplankton cell absorbing nutrients) the <span class="math notranslate nohighlight">\(C_s \approx 0\)</span>.
+If we have a formula for <span class="math notranslate nohighlight">\(Q_{\mathit{diff}}\)</span>, then all we need to know is <span class="math notranslate nohighlight">\(\mathcal{Sh}\)</span>.
+Then, we can calculate the actual mass flux (including diffusion <em>and</em> advection) into a moving particle, <span class="math notranslate nohighlight">\(Q_{\mathit{adv}}\)</span>.</p>
+<p>A very useful set of formulas approximating <span class="math notranslate nohighlight">\(\mathcal{Sh}\)</span> relevant to many environmental particles is given by Kiorboe et al. (2001). Here are some plots of <span class="math notranslate nohighlight">\(\mathcal{Sh}\)</span> as a function of <span class="math notranslate nohighlight">\(\mathcal{Re}\)</span> and <span class="math notranslate nohighlight">\(\mathcal{Sc}\)</span>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import modules:</span>
+<span class="c1">#%matplotlib</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">CubicSpline</span><span class="p">,</span> <span class="n">interp1d</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">root</span><span class="p">,</span> <span class="n">bisect</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Experimental data for Cd for a sphere:</span>
+<span class="n">relist</span><span class="o">=</span><span class="p">[</span> <span class="mf">.05875</span><span class="p">,</span> <span class="mf">.1585</span><span class="p">,</span> <span class="mf">.4786</span><span class="p">,</span> <span class="mf">3.020</span><span class="p">,</span> <span class="mf">7.015</span><span class="p">,</span> <span class="mf">15.49</span><span class="p">,</span> <span class="mf">57.54</span><span class="p">,</span> <span class="mf">144.5</span><span class="p">,</span> <span class="mf">264.9</span><span class="p">,</span> <span class="mf">512.9</span><span class="p">,</span> <span class="mf">1000.</span><span class="p">,</span> <span class="mf">1862.</span><span class="p">,</span> <span class="mf">3162.</span><span class="p">,</span> <span class="mf">4764.</span><span class="p">,</span> <span class="mf">8375.</span><span class="p">,</span> <span class="mf">.1556</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mf">.2648</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mf">.3467</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mf">.5888</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">5</span><span class="p">,</span> <span class="mf">.1000</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mf">.1702</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mf">.2317</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mf">.2648</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mf">.2710</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mf">.2851</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mf">.3020</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mf">.3388</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mf">.3981</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mf">.5129</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="mf">.1778</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">,</span> <span class="mf">.2291</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">,</span> <span class="mf">.5012</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">cdlist</span> <span class="o">=</span> <span class="p">[</span><span class="mf">492.0</span><span class="p">,</span> <span class="mf">169.8</span><span class="p">,</span> <span class="mf">58.88</span><span class="p">,</span> <span class="mf">10.86</span><span class="p">,</span> <span class="mf">5.623</span><span class="p">,</span> <span class="mf">3.388</span><span class="p">,</span> <span class="mf">1.479</span><span class="p">,</span> <span class="mf">.9204</span><span class="p">,</span> <span class="mf">.7194</span><span class="p">,</span> <span class="mf">.5623</span><span class="p">,</span> <span class="mf">.4786</span><span class="p">,</span> <span class="mf">.4365</span><span class="p">,</span> <span class="mf">.4074</span><span class="p">,</span> <span class="mf">.3890</span><span class="p">,</span> <span class="mf">.3981</span><span class="p">,</span> <span class="mf">.4395</span><span class="p">,</span> <span class="mf">.4571</span><span class="p">,</span> <span class="mf">.4775</span><span class="p">,</span> <span class="mf">.4732</span><span class="p">,</span> <span class="mf">.4624</span><span class="p">,</span><span class="mf">.4395</span><span class="p">,</span> <span class="mf">.4046</span><span class="p">,</span> <span class="mf">.3733</span><span class="p">,</span> <span class="mf">.3467</span><span class="p">,</span> <span class="mf">.2472</span><span class="p">,</span> <span class="mf">.1778</span><span class="p">,</span> <span class="mf">.1047</span><span class="p">,</span> <span class="mf">.09772</span><span class="p">,</span> <span class="mf">.1000</span><span class="p">,</span> <span class="mf">.1778</span><span class="p">,</span> <span class="mf">.1862</span><span class="p">,</span> <span class="mf">.1862</span><span class="p">]</span>
+<span class="n">CdRe_logdata</span> <span class="o">=</span> <span class="p">[(</span><span class="n">log</span><span class="p">(</span><span class="n">relist</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">10</span><span class="p">),</span><span class="n">log</span><span class="p">(</span><span class="n">cdlist</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">10</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">relist</span><span class="p">))]</span>
+<span class="n">Re_logdata</span> <span class="o">=</span> <span class="p">[</span><span class="n">log</span><span class="p">(</span><span class="n">relist</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">relist</span><span class="p">))]</span>
+<span class="n">Cd_logdata</span> <span class="o">=</span> <span class="p">[</span><span class="n">log</span><span class="p">(</span><span class="n">cdlist</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">relist</span><span class="p">))]</span>
+<span class="n">stokes_transition</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="c1">#CdL_interp = spline(CdRe_logdata)</span>
+<span class="c1">#CdL_interp = CubicSpline(Re_logdata,Cd_logdata)</span>
+<span class="n">CdL_interp</span> <span class="o">=</span> <span class="n">interp1d</span><span class="p">(</span><span class="n">Re_logdata</span><span class="p">,</span><span class="n">Cd_logdata</span><span class="p">)</span>
+<span class="n">ReL_plot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="n">Re_logdata</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">num</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span>
+<span class="c1">#ReL_plot = np.linspace(Re_logdata[0],Re_logdata[-1],num=128)</span>
+<span class="c1">#CdL_plot = CdL_interp(ReL_plot)</span>
+<span class="c1"># Stokes and Oseen analytical solutions</span>
+<span class="n">Cd_Stokes</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">Re_</span><span class="p">:</span> <span class="mf">24.</span><span class="o">/</span><span class="n">Re_</span>
+<span class="n">Cd_Oseen</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">Re_</span><span class="p">:</span> <span class="mf">24.</span><span class="o">/</span><span class="n">Re_</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="mf">3.</span><span class="o">/</span><span class="mf">16.</span><span class="o">*</span><span class="n">Re_</span><span class="p">)</span>
+<span class="n">CdL_Stokes</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">logRe_</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mf">24.</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">logRe_</span><span class="p">))</span>
+<span class="n">CdL_Oseen</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">logRe_</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mf">24.</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">logRe_</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="mf">3.</span><span class="o">/</span><span class="mf">16.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">logRe_</span><span class="p">)))</span>
+<span class="n">CdRe</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">logRe_</span><span class="p">:</span> <span class="n">CdL_Oseen</span><span class="p">(</span><span class="n">logRe_</span><span class="p">)</span> <span class="k">if</span> <span class="n">logRe_</span> <span class="o">&lt;=</span> <span class="n">log</span><span class="p">(</span><span class="n">stokes_transition</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="k">else</span> <span class="n">CdL_interp</span><span class="p">(</span><span class="n">logRe_</span><span class="p">)</span>
+<span class="n">CdL_plot</span> <span class="o">=</span> <span class="p">[</span><span class="n">CdRe</span><span class="p">(</span><span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">ReL_plot</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cd_error</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">F_D</span><span class="p">,</span><span class="n">rho</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">U</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A function evaluating the error between the parameter U and the</span>
+<span class="sd">    movement speed of a sphere with radius r subjected to force F_D in</span>
+<span class="sd">    fluid with density rho and viscosity mu. The U for which this function</span>
+<span class="sd">    evaluates to zero is the steady state movement speed. &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">U</span><span class="o">==</span><span class="mf">0.</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">F_D</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">signU</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+        <span class="n">absU</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">U</span><span class="p">)</span>
+        <span class="c1">#print &#39;got here...&#39;,r,F_D,rho,mu,U</span>
+        <span class="n">logRe</span><span class="o">=</span><span class="n">log</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">r</span><span class="o">*</span><span class="n">absU</span><span class="o">/</span><span class="n">mu</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">logCd</span><span class="o">=</span><span class="n">CdRe</span><span class="p">(</span><span class="n">logRe</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">signU</span><span class="o">*</span><span class="mf">0.5</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">U</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="n">logCd</span> <span class="o">-</span> <span class="n">F_D</span>
+
+<span class="k">def</span> <span class="nf">U_sphere</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">F_D</span><span class="p">,</span><span class="n">rho</span><span class="p">,</span><span class="n">mu</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Steady-state movement velocity of a sphere in fluid, as determined by the</span>
+<span class="sd">    root of the error metric cd_error. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Determine the range over which the numerical root-finding algorithm should operate:</span>
+    <span class="c1">#Re_=2*rho*r*U./mu</span>
+    <span class="n">Urange</span><span class="o">=</span><span class="n">relist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">mu</span><span class="o">/</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">rho</span><span class="o">*</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">Uerr</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="n">cd_error</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">F_D</span><span class="p">,</span><span class="n">rho</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">u</span><span class="p">)</span>
+    <span class="n">U</span><span class="o">=</span><span class="n">bisect</span><span class="p">(</span><span class="n">Uerr</span><span class="p">,</span><span class="o">-</span><span class="n">Urange</span><span class="p">,</span><span class="n">Urange</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">0.000001</span><span class="p">,</span><span class="n">full_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">U</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">Sherwood</span><span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="n">D</span><span class="p">,</span><span class="n">rho</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">U</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Calculate the Sherwood number for a moving sphere according to the curve fit from</span>
+<span class="sd">    Kiorboe et al. (2001). D is the diffusion coefficient; other parameters as above.&quot;&quot;&quot;</span>
+    <span class="n">Re_</span><span class="o">=</span><span class="n">r</span><span class="o">*</span><span class="n">U</span><span class="o">*</span><span class="n">rho</span><span class="o">/</span><span class="n">mu</span>  <span class="c1"># Note that Kiorboe et al. use radius, not diameter as the length scale for Re</span>
+    <span class="n">Pe_</span><span class="o">=</span><span class="n">r</span><span class="o">*</span><span class="n">U</span><span class="o">/</span><span class="n">D</span>  <span class="c1"># Note that Kiorboe et al. use radius, not diameter as the length scale for Re</span>
+    <span class="n">Sc</span><span class="o">=</span><span class="n">mu</span><span class="o">/</span><span class="p">(</span><span class="n">D</span><span class="o">*</span><span class="n">rho</span><span class="p">)</span>
+    <span class="c1">#Sc=Pe_/Re_</span>
+    <span class="n">Sh</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">+</span> <span class="mf">0.62</span> <span class="o">*</span> <span class="n">Re_</span><span class="o">**</span><span class="mf">0.41</span> <span class="o">*</span> <span class="n">Sc</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Sh</span>
+
+
+<span class="n">Sh_RePe</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">Re_</span><span class="p">,</span><span class="n">Pe_</span><span class="p">:</span> <span class="n">Sherwood</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">Pe_</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">Re_</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>   
+<span class="n">Sh_RePe3333</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">Re_</span><span class="p">:</span> <span class="n">Sherwood</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">3333.</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">Re_</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>   
+<span class="n">Sh_RePe1000</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">Re_</span><span class="p">:</span> <span class="n">Sherwood</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">1000.</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">Re_</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>   
+<span class="n">Sh_RePe333</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">Re_</span><span class="p">:</span> <span class="n">Sherwood</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">333.</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">Re_</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>   
+<span class="n">Sh_ReSc</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">Re_</span><span class="p">,</span><span class="n">Sc_</span><span class="p">:</span> <span class="n">Sherwood</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="n">Sc_</span><span class="o">*</span><span class="n">Re_</span><span class="p">),</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="n">Re_</span><span class="p">,</span><span class="mf">1.</span><span class="p">)</span>   
+<span class="n">Sh_ReSc3333</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">Re_</span><span class="p">:</span> <span class="n">Sherwood</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">3333.</span><span class="o">*</span><span class="n">Re_</span><span class="p">),</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="n">Re_</span><span class="p">,</span><span class="mf">1.</span><span class="p">)</span>   
+<span class="n">Sh_ReSc1000</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">Re_</span><span class="p">:</span> <span class="n">Sherwood</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">1000.</span><span class="o">*</span><span class="n">Re_</span><span class="p">),</span><span class="mf">1.</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="n">Re_</span><span class="p">,</span><span class="mf">1.</span><span class="p">)</span>   
+<span class="n">Sh_ReSc333</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">Re_</span><span class="p">:</span> <span class="n">Sherwood</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="p">(</span><span class="mf">333.</span><span class="o">*</span><span class="n">Re_</span><span class="p">),</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="n">Re_</span><span class="p">,</span><span class="mf">1.</span><span class="p">)</span>   
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show the Sherwood plots </span>
+<span class="n">fig2</span><span class="p">,</span> <span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">Re_Sher</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">1.e-1</span><span class="p">,</span><span class="mf">2.e1</span><span class="p">,</span><span class="n">num</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Re_Sher</span><span class="p">,</span><span class="n">Sh_ReSc3333</span><span class="p">(</span><span class="n">Re_Sher</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sc=3333&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Re_Sher</span><span class="p">,</span><span class="n">Sh_ReSc1000</span><span class="p">(</span><span class="n">Re_Sher</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sc=1000&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Re_Sher</span><span class="p">,</span><span class="n">Sh_ReSc333</span><span class="p">(</span><span class="n">Re_Sher</span><span class="p">),</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Sc=333&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Reynolds number, $Re$&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Sherwood number, $Sh$&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/a26e781c29a7f893cd161b9666d6931fd4bc374bf75703b63aaaa35be17e183c.png" src="../../_images/a26e781c29a7f893cd161b9666d6931fd4bc374bf75703b63aaaa35be17e183c.png" />
+</div>
+</div>
+</section>
+<section id="sherwood-number-calculator">
+<h2><span class="section-number">2.3.2. </span>Sherwood number calculator<a class="headerlink" href="#sherwood-number-calculator" title="Permalink to this heading">#</a></h2>
+<p>As you can see in the plot above, under some conditions mass transport is greatly increased by fluid flow.
+But, under other conditions, the increase is minimal.
+Which applies to a given situation?</p></p>
+<p>The text panel below enables you to enter the particle size, density and surface solute concentration, and the fluid viscosity, density and solute concentration.
+The worksheet will then calculate for you the corresponding <span class="math notranslate nohighlight">\(\mathcal{Re}\)</span>, <span class="math notranslate nohighlight">\(\mathcal{Sh}\)</span> and mass transport rates.</p>
+<p>In many environmental problems, important issues involve the amount of mass transport per unit mass of particle.
+For example, a pollution problem may involve knowing whether a given mass of pollutant divided into many small particles has a different environmental effect than the same mass in a few larger particles.
+In the example of nutrient uptake by phytoplankton, an ecological question might revolve around whether a given biomass of small cells is more effective at competing for nutrients than an equal biomass of large cells.
+The calculator enables you to address those questions by calculating the mass transport per unit mass of particle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu7</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">1.376e-3</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\mu~~ (\frac{N s}{m^2})$&quot;</span><span class="p">)</span>
+<span class="n">rho_water</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">1028.</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\rho~~ (\frac</span><span class="si">{kg}</span><span class="s2">{m^3})$&quot;</span><span class="p">)</span>
+<span class="n">rho_sphere</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">1105.</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\rho_</span><span class="si">{sphere}</span><span class="s2">~~ (\frac</span><span class="si">{kg}</span><span class="s2">{m^3})$&quot;</span><span class="p">)</span>
+<span class="n">C_s</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$C_s$&quot;</span><span class="p">)</span>
+<span class="n">C_w</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$C_w$&quot;</span><span class="p">)</span>
+<span class="n">D7</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">5.e-6</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$D~~ (m)$&quot;</span><span class="p">)</span>
+<span class="n">K7</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatText</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span><span class="n">description</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$K~~ (\frac{m^2}</span><span class="si">{s}</span><span class="s2">)$&quot;</span><span class="p">)</span>
+
+<span class="n">ui1e</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">mu7</span><span class="p">,</span><span class="n">rho_water</span><span class="p">,</span><span class="n">C_w</span><span class="p">])</span>
+<span class="n">ui2e</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">rho_sphere</span><span class="p">,</span><span class="n">D7</span><span class="p">,</span><span class="n">C_s</span><span class="p">])</span>
+<span class="n">ui3e</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">ui1e</span><span class="p">,</span> <span class="n">ui2e</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">Sh7</span><span class="p">(</span><span class="n">rho_water</span><span class="p">,</span><span class="n">rho_sphere</span><span class="p">,</span><span class="n">D7</span><span class="p">,</span><span class="n">mu7</span><span class="p">,</span><span class="n">K7</span><span class="p">,</span><span class="n">C_w</span><span class="p">,</span><span class="n">C_s</span><span class="p">):</span>
+    <span class="n">rr</span><span class="o">=</span><span class="n">D7</span><span class="o">/</span><span class="mf">2.</span>
+    <span class="n">vol</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="mf">4.</span><span class="o">/</span><span class="mf">3.</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">rr</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">excess_mass</span><span class="o">=-</span><span class="p">(</span><span class="n">rho_sphere</span><span class="o">-</span><span class="n">rho_water</span><span class="p">)</span><span class="o">*</span><span class="n">vol</span> <span class="c1"># Keep the same sign convention as </span>
+                                            <span class="c1"># Het_labX.sws -- positive z is up</span>
+    <span class="n">g</span><span class="o">=</span><span class="mf">9.81</span>
+    <span class="n">ff</span><span class="o">=</span><span class="n">g</span><span class="o">*</span><span class="n">excess_mass</span>
+    <span class="k">if</span> <span class="n">rho_water</span><span class="o">==</span><span class="n">rho_sphere</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;External force is zero...&#39;</span><span class="p">)</span>
+        <span class="n">U_s</span><span class="o">=</span><span class="mf">0.</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">U_s</span><span class="o">=</span><span class="n">U_sphere</span><span class="p">(</span><span class="n">rr</span><span class="p">,</span><span class="n">ff</span><span class="p">,</span><span class="n">rho_water</span><span class="p">,</span><span class="n">mu7</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Volume = </span><span class="si">{:.4g}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vol</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Excess mass = </span><span class="si">{:.4g}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">excess_mass</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Gravity/buoyancy force = </span><span class="si">{:.4g}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">g</span><span class="o">*</span><span class="n">excess_mass</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Reynolds number: Re = </span><span class="si">{:.4g}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">rr</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">U_s</span><span class="p">)</span><span class="o">*</span><span class="n">rho_water</span><span class="o">/</span><span class="n">mu7</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;U = </span><span class="si">{:.4g}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">U_s</span><span class="p">))</span>
+
+    <span class="n">Flux_diff</span><span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">K7</span> <span class="o">*</span> <span class="n">rr</span> <span class="o">*</span> <span class="p">(</span><span class="n">C_w</span><span class="o">-</span><span class="n">C_s</span><span class="p">))</span>
+    <span class="c1">#print &#39;\nFlux_diff=&#39;,Flux_diff</span>
+    <span class="n">Sh</span> <span class="o">=</span> <span class="n">Sherwood</span><span class="p">(</span><span class="n">rr</span><span class="p">,</span><span class="n">K7</span><span class="p">,</span><span class="n">rho_water</span><span class="p">,</span><span class="n">mu7</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">U_s</span><span class="p">))</span>
+    <span class="n">Flux_adv</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">Sh</span><span class="o">*</span><span class="n">Flux_diff</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Sherwood number: Sh = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Sh</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Diffusive transport: Q_diff = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Flux_diff</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Advective transport: Q_adv = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Flux_adv</span><span class="p">))</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Advective transport per unit mass: Q_adv/Excess mass = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Flux_adv</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">excess_mass</span><span class="p">)))</span>   
+    
+    
+<span class="n">out7</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">interactive_output</span><span class="p">(</span><span class="n">Sh7</span><span class="p">,{</span><span class="s1">&#39;rho_water&#39;</span><span class="p">:</span><span class="n">rho_water</span><span class="p">,</span><span class="s1">&#39;rho_sphere&#39;</span><span class="p">:</span><span class="n">rho_sphere</span><span class="p">,</span>
+                                      <span class="s1">&#39;D7&#39;</span><span class="p">:</span><span class="n">D7</span><span class="p">,</span><span class="s1">&#39;mu7&#39;</span><span class="p">:</span><span class="n">mu7</span><span class="p">,</span><span class="s1">&#39;K7&#39;</span><span class="p">:</span><span class="n">K7</span><span class="p">,</span><span class="s1">&#39;C_s&#39;</span><span class="p">:</span><span class="n">C_s</span><span class="p">,</span><span class="s1">&#39;C_w&#39;</span><span class="p">:</span><span class="n">C_w</span><span class="p">})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">ui3e</span><span class="p">,</span><span class="n">out7</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "b71175b16d0e46e18d6d7e5bf983c71e"}</script><script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "6acd75a0028347e08c4ea41b373e7917"}</script></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./submodules/qlb-notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="RS2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>🧮 Particle transport by currents and turbulence</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../content/biomechanics/mol-trans-mechs/README.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.4. </span>Molecular Transport Mechanisms</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effects-of-flow-on-molecular-transport-mechanisms">2.3.1. Effects of flow on molecular transport mechanisms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sherwood-number-calculator">2.3.2. Sherwood number calculator</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Daniel Grünbaum
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

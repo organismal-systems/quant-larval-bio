@@ -65,8 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/biomechanics/README';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.1. Molecular Transport Mechanisms" href="mol-trans-mechs/README.html" />
-    <link rel="prev" title="1.7. Movement of spherical particles in fluid: Analyses using the Reynolds number" href="../../submodules/qlb-notebooks/ReynoldsSphere.html" />
+    <link rel="next" title="2.1. 🧮 Movement of spherical particles in fluid: Analyses using the Reynolds number: Part 1" href="../../submodules/qlb-notebooks/RS1.html" />
+    <link rel="prev" title="1.6. 📖 Non-dimensional numbers" href="../../submodules/qlb-notebooks/nondim-numbers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,18 +170,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../overview/scale-models/README.html">1.4. Scale-models and nondimensional numbers in Larval Biology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../submodules/qlb-notebooks/scale-models.html">1.5. 🧮 Scale models and dynamic similarity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../submodules/qlb-notebooks/nondim-numbers.html">1.6. 📖 Non-dimensional numbers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../submodules/qlb-notebooks/ReynoldsSphere.html">1.7. Movement of spherical particles in fluid: Analyses using the Reynolds number</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Biomechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Biomechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="mol-trans-mechs/README.html">2.1. Molecular Transport Mechanisms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mech-larval-swim/README.html">2.2. Mechanics of Larval Swimming</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../submodules/pyVRS/ChimeraSwim4.html">2.3. Swimming of early larval stages in still water and shear</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../submodules/pyVRS/ChimeraDesign.html">2.4. Design and save early larval morphologies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mech-larval-swim/ChimeraSwimActivities.html">2.5. 🛼 Activities: Exploring effects of size and shape in Early Larval Swimming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../submodules/qlb-notebooks/RS1.html">2.1. 🧮 Movement of spherical particles in fluid: Analyses using the Reynolds number: Part 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../submodules/qlb-notebooks/RS2.html">2.2. 🧮 Particle transport by currents and turbulence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../submodules/qlb-notebooks/RS3.html">2.3. 🧮 Mass flux in and out of moving particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mol-trans-mechs/README.html">2.4. Molecular Transport Mechanisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mech-larval-swim/README.html">2.5. Mechanics of Larval Swimming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../submodules/pyVRS/ChimeraSwim4.html">2.6. 🧮 Swimming of early larval stages in still water and shear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../submodules/pyVRS/ChimeraDesign.html">2.7. 🧮 Design and save early larval morphologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mech-larval-swim/ChimeraSwimActivities.html">2.8. 🛼 Activities: Exploring effects of size and shape in Early Larval Swimming</a></li>
 </ul>
 </li>
 </ul>
@@ -414,7 +416,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="biomechanics">
 <h1><span class="section-number">2. </span>Biomechanics<a class="headerlink" href="#biomechanics" title="Permalink to this heading">#</a></h1>
-<p>This is a placeholder for the opening of the Biomechanics Part.</p>
+<p>This section develops the use of nondimensional numbers to calculate particle movement and mass transfer in fluids.</p>
+<p>This is a Binder link to a notebook for the exploring movement of spherical particles (like eggs)in fluid:</p>
+<p><a class="reference external" href="https://mybinder.org/v2/gh/seastate/qlb-notebooks/main?labpath=RS1.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p>This is a Binder link to a notebook for the exploring the dispersal of particles due to diffusion and advection, using Gaussian plume models:
+<a class="reference external" href="https://mybinder.org/v2/gh/seastate/qlb-notebooks/main?labpath=RS2.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p>This is a Binder link to a notebook for the exploringmolecular transport in flow, using the Sherwood number:
+<a class="reference external" href="https://mybinder.org/v2/gh/seastate/qlb-notebooks/main?labpath=RS3.ipynb"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -450,20 +458,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../submodules/qlb-notebooks/ReynoldsSphere.html"
+       href="../../submodules/qlb-notebooks/nondim-numbers.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.7. </span>Movement of spherical particles in fluid: Analyses using the Reynolds number</p>
+        <p class="prev-next-title"><span class="section-number">1.6. </span>📖 Non-dimensional numbers</p>
       </div>
     </a>
     <a class="right-next"
-       href="mol-trans-mechs/README.html"
+       href="../../submodules/qlb-notebooks/RS1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Molecular Transport Mechanisms</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>🧮 Movement of spherical particles in fluid: Analyses using the Reynolds number: Part 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

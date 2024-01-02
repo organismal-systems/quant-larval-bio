@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.3. Swimming of early larval stages in still water and shear &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
+    <title>2.6. 🧮 Swimming of early larval stages in still water and shear &#8212; Quantitative Approaches to Larval Biology -- Selected topics and executable examples</title>
   
   
   
@@ -67,8 +67,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'submodules/pyVRS/ChimeraSwim4';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.4. Design and save early larval morphologies" href="ChimeraDesign.html" />
-    <link rel="prev" title="2.2. Mechanics of Larval Swimming" href="../../content/biomechanics/mech-larval-swim/README.html" />
+    <link rel="next" title="2.7. 🧮 Design and save early larval morphologies" href="ChimeraDesign.html" />
+    <link rel="prev" title="2.5. Mechanics of Larval Swimming" href="../../content/biomechanics/mech-larval-swim/README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -172,18 +172,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../content/overview/scale-models/README.html">1.4. Scale-models and nondimensional numbers in Larval Biology</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../qlb-notebooks/scale-models.html">1.5. 🧮 Scale models and dynamic similarity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../qlb-notebooks/nondim-numbers.html">1.6. 📖 Non-dimensional numbers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../qlb-notebooks/ReynoldsSphere.html">1.7. Movement of spherical particles in fluid: Analyses using the Reynolds number</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Biomechanics</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../content/biomechanics/README.html">2. Biomechanics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mol-trans-mechs/README.html">2.1. Molecular Transport Mechanisms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mech-larval-swim/README.html">2.2. Mechanics of Larval Swimming</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. Swimming of early larval stages in still water and shear</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ChimeraDesign.html">2.4. Design and save early larval morphologies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mech-larval-swim/ChimeraSwimActivities.html">2.5. 🛼 Activities: Exploring effects of size and shape in Early Larval Swimming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../qlb-notebooks/RS1.html">2.1. 🧮 Movement of spherical particles in fluid: Analyses using the Reynolds number: Part 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../qlb-notebooks/RS2.html">2.2. 🧮 Particle transport by currents and turbulence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../qlb-notebooks/RS3.html">2.3. 🧮 Mass flux in and out of moving particles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mol-trans-mechs/README.html">2.4. Molecular Transport Mechanisms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mech-larval-swim/README.html">2.5. Mechanics of Larval Swimming</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.6. 🧮 Swimming of early larval stages in still water and shear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ChimeraDesign.html">2.7. 🧮 Design and save early larval morphologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/biomechanics/mech-larval-swim/ChimeraSwimActivities.html">2.8. 🛼 Activities: Exploring effects of size and shape in Early Larval Swimming</a></li>
 </ul>
 </li>
 </ul>
@@ -402,7 +404,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Swimming of early larval stages in still water and shear</h1>
+    <h1>🧮 Swimming of early larval stages in still water and shear</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -412,15 +414,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-this-notebook">2.3.1. How to use this notebook</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-jupyter-notebook-cells">2.3.1.1. Executing Jupyter notebook cells</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-graphics-output">2.3.1.2. Using graphics output</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-larval-shape">2.3.1.3. Selecting a larval shape</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-this-notebook">2.6.1. How to use this notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-jupyter-notebook-cells">2.6.1.1. Executing Jupyter notebook cells</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-graphics-output">2.6.1.2. Using graphics output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-larval-shape">2.6.1.3. Selecting a larval shape</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-larval-shape-a-id-section-loadshape-a">2.3.2. Loading a larval shape <a id="section_loadshape"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-simulation-parameters">2.3.3. Define the simulation parameters</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-run-a-simulation-a-id-section-runshape-a">2.3.4. To run a simulation <a id="section_runshape"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-larval-shape-a-id-section-loadshape-a">2.6.2. Loading a larval shape <a id="section_loadshape"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-simulation-parameters">2.6.3. Define the simulation parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-run-a-simulation-a-id-section-runshape-a">2.6.4. To run a simulation <a id="section_runshape"></a></a></li>
 </ul>
             </nav>
         </div>
@@ -433,16 +435,16 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="swimming-of-early-larval-stages-in-still-water-and-shear">
-<h1><span class="section-number">2.3. </span>Swimming of early larval stages in still water and shear<a class="headerlink" href="#swimming-of-early-larval-stages-in-still-water-and-shear" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2.6. </span>🧮 Swimming of early larval stages in still water and shear<a class="headerlink" href="#swimming-of-early-larval-stages-in-still-water-and-shear" title="Permalink to this heading">#</a></h1>
 <p>This is a graphical interface for using the pyVRS (Python Volume-Rendered Swimmer) model of low-Reynolds number hydrodynamics. It has a simplified interface for entering parameters to investigate stability and movement of early-stage larval morphologies (e.g., eggs, blastulae and gastrulae) approximated by “chimeras” of semi-spheroids. These early larval shapes are constructed by joining two half-spheroids about a common central radius.</p>
 <p>By choosing different spheroid shapes (larger vs. smaller central radii; longer vs. shorter semi-spheroids, etc.) you can construct different surface shapes that resemble the outside surfaces of early stages in larval development. You can assign the main volume inside this surface to have a density that reflects the larval tissue within this surface.</p>
 <p>You can also add inclusions, constructed from two half-spheroids, to reflect the inner structure of early stage larvae. You can assign different densities to model the effects of internal volumes of these inclusions, to reflect whether they are filled with seawater, calcium carbonate, lipid, or other materials.</p>
 <p>The resulting shapes do not represent any particular species and stage exactly, but they approximate early stages including eggs, gastrulae and blastulae from a wide diversity of species, and an even wider diversity of hypothetical larval morphologies that do not appear in nature. This makes these shapes good tools for exploring the consequences of size, morphological and physiological features, and properties of the fluid environment such as shear.</p>
 <section id="how-to-use-this-notebook">
-<h2><span class="section-number">2.3.1. </span>How to use this notebook<a class="headerlink" href="#how-to-use-this-notebook" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.6.1. </span>How to use this notebook<a class="headerlink" href="#how-to-use-this-notebook" title="Permalink to this heading">#</a></h2>
 <p>This notebook is set up with “cells” that contain either Python code or explanatory text. You can see the cells by the bars and numbers on the left side of the notebook window.</p>
 <section id="executing-jupyter-notebook-cells">
-<h3><span class="section-number">2.3.1.1. </span>Executing Jupyter notebook cells<a class="headerlink" href="#executing-jupyter-notebook-cells" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.6.1.1. </span>Executing Jupyter notebook cells<a class="headerlink" href="#executing-jupyter-notebook-cells" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>To start the model, pull down the <code class="docutils literal notranslate"><span class="pre">Run</span></code> menu and select <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Cells</span></code></strong></p></li>
 <li><p><strong>To execute a code cell, select it and hold down the shift key while typing the <code class="docutils literal notranslate"><span class="pre">enter</span></code> key.</strong></p></li>
@@ -450,7 +452,7 @@ document.write(`
 </ul>
 </section>
 <section id="using-graphics-output">
-<h3><span class="section-number">2.3.1.2. </span>Using graphics output<a class="headerlink" href="#using-graphics-output" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.6.1.2. </span>Using graphics output<a class="headerlink" href="#using-graphics-output" title="Permalink to this heading">#</a></h3>
 <p>When the model starts, it creates a larval shape using default parameters. That shape is shown in a separate, resizable graphics window. You can:</p>
 <ul class="simple">
 <li><p><strong>Click and drag on graphics windows to control the viewing angle.</strong></p></li>
@@ -458,7 +460,7 @@ document.write(`
 </ul>
 </section>
 <section id="selecting-a-larval-shape">
-<h3><span class="section-number">2.3.1.3. </span>Selecting a larval shape<a class="headerlink" href="#selecting-a-larval-shape" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.6.1.3. </span>Selecting a larval shape<a class="headerlink" href="#selecting-a-larval-shape" title="Permalink to this heading">#</a></h3>
 <p>There are two ways to select a larval shape:</p>
 <ul class="simple">
 <li><p><span class="xref myst">Load a file containing the shape and pre-computed hydrodynamic properties</span></p></li>
@@ -596,7 +598,7 @@ You can then save that shape to simulate it in a future session without having t
 <hr style="border:10px solid red"></section>
 </section>
 <section id="loading-a-larval-shape-a-id-section-loadshape-a">
-<h2><span class="section-number">2.3.2. </span>Loading a larval shape <a id='section_loadshape'></a><a class="headerlink" href="#loading-a-larval-shape-a-id-section-loadshape-a" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.6.2. </span>Loading a larval shape <a id='section_loadshape'></a><a class="headerlink" href="#loading-a-larval-shape-a-id-section-loadshape-a" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create and display a FileChooser widget</span>
@@ -647,7 +649,7 @@ You can then save that shape to simulate it in a future session without having t
 </div>
 <hr style="border:10px solid red"></section>
 <section id="define-the-simulation-parameters">
-<h2><span class="section-number">2.3.3. </span>Define the simulation parameters<a class="headerlink" href="#define-the-simulation-parameters" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.6.3. </span>Define the simulation parameters<a class="headerlink" href="#define-the-simulation-parameters" title="Permalink to this heading">#</a></h2>
 <p>This cell sets parameters for simulating how the larval shape swims under different flow conditions.</p>
 <p>The parameters are:</p>
 <ul class="simple">
@@ -689,7 +691,7 @@ You can then save that shape to simulate it in a future session without having t
 </div>
 </section>
 <section id="to-run-a-simulation-a-id-section-runshape-a">
-<h2><span class="section-number">2.3.4. </span>To run a simulation <a id='section_runshape'></a><a class="headerlink" href="#to-run-a-simulation-a-id-section-runshape-a" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.6.4. </span>To run a simulation <a id='section_runshape'></a><a class="headerlink" href="#to-run-a-simulation-a-id-section-runshape-a" title="Permalink to this heading">#</a></h2>
 <p>Hit the <strong>Reset</strong> button to create a new simulation window.</p>
 <p>Hit <strong>Run</strong> to simulate swimming of the larval shape you defined using the flow parameters you defined.</p>
 <p>In this window, the left hand side plot shows the trajectory of the larva (blue lines), starting at the position (0,0,0) which is marked with a red dot. The simulated time, and the larval position and velocity are given at the top of the plot.</p>
@@ -774,7 +776,7 @@ You can then save that shape to simulate it in a future session without having t
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.2. </span>Mechanics of Larval Swimming</p>
+        <p class="prev-next-title"><span class="section-number">2.5. </span>Mechanics of Larval Swimming</p>
       </div>
     </a>
     <a class="right-next"
@@ -782,7 +784,7 @@ You can then save that shape to simulate it in a future session without having t
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.4. </span>Design and save early larval morphologies</p>
+        <p class="prev-next-title"><span class="section-number">2.7. </span>🧮 Design and save early larval morphologies</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -801,15 +803,15 @@ You can then save that shape to simulate it in a future session without having t
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-this-notebook">2.3.1. How to use this notebook</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-jupyter-notebook-cells">2.3.1.1. Executing Jupyter notebook cells</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-graphics-output">2.3.1.2. Using graphics output</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-larval-shape">2.3.1.3. Selecting a larval shape</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-this-notebook">2.6.1. How to use this notebook</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-jupyter-notebook-cells">2.6.1.1. Executing Jupyter notebook cells</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-graphics-output">2.6.1.2. Using graphics output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-a-larval-shape">2.6.1.3. Selecting a larval shape</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-larval-shape-a-id-section-loadshape-a">2.3.2. Loading a larval shape <a id="section_loadshape"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-simulation-parameters">2.3.3. Define the simulation parameters</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-run-a-simulation-a-id-section-runshape-a">2.3.4. To run a simulation <a id="section_runshape"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-a-larval-shape-a-id-section-loadshape-a">2.6.2. Loading a larval shape <a id="section_loadshape"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-the-simulation-parameters">2.6.3. Define the simulation parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#to-run-a-simulation-a-id-section-runshape-a">2.6.4. To run a simulation <a id="section_runshape"></a></a></li>
 </ul>
   </nav></div>
 
