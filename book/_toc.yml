@@ -15,7 +15,7 @@ parts:
       - file: content/overview/scale-models/README.md      
       - file: submodules/qlb-notebooks/scale-models.ipynb
       - file: submodules/qlb-notebooks/nondim-numbers.ipynb
-      - file: submodules/qlb-notebooks/ReynoldsSphere.ipynb
+      #- file: submodules/qlb-notebooks/ReynoldsSphere.ipynb
   - caption: Biomechanics
     numbered: true
     chapters:
@@ -23,6 +23,9 @@ parts:
     #- file: content/notebooks
     - file: content/biomechanics/README.md
       sections: 
+      - file: submodules/qlb-notebooks/RS1.ipynb
+      - file: submodules/qlb-notebooks/RS2.ipynb
+      - file: submodules/qlb-notebooks/RS3.ipynb
       - file: content/biomechanics/mol-trans-mechs/README.md
       - file: content/biomechanics/mech-larval-swim/README.md
       #- file: submodules/pyVRS/ChimeraSwim.ipynb
